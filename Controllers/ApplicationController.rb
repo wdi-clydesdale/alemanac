@@ -7,6 +7,6 @@ class ApplicationController < Sinatra::Base
     :database => 'alemanac'
     )
 
-  set :views, File.expand_paths('../../views',__FILE__)
-  
+  set :views, File.expand_path('../../views',__FILE__)
+
 end

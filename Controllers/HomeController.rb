@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
 
   get '/' do
-    erb: index
+    erb :index
   end
 end
