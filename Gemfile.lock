@@ -15,6 +15,7 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     arel (6.0.2)
+    bcrypt (3.1.10)
     builder (3.2.2)
     i18n (0.7.0)
     json (1.8.3)
@@ -39,6 +40,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt
   json
   pg
   sinatra
