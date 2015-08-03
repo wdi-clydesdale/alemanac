@@ -6,10 +6,13 @@
     </div> <!--end whitespace -->
           <div class='col-md-6'>
               <div class="input-group">
-                <input type="text" class="form-control" placeholder="Search for beer...">
-                <span class="input-group-btn">
-                <button class="btn btn-default" type="button">Go!</button>
-              </span>
+                <form action="/" method="post">
+                  <input type="text" name="search_string" class="form-control" placeholder="Search for beer...">
+                  <span class="input-group-btn">
+                  <!-- <button class="btn btn-default" type="button">Go!</button> -->
+                    <input type="submit" class="btn btn-default" name="name" value="Search">
+                  </span>
+                </form>
             </div><!-- /input-group -->
           </div> <!--/6 column container-->
     <div class='col-md-3'>

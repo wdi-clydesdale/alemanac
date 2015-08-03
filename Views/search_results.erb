@@ -1,0 +1,13 @@
+<h1>It's the search results!</h1>
+
+<script>
+
+</script>
+
+
+
+<% @search_results["data"].each do |beer| %>
+
+  <li><%= beer["name"] %></li>
+
+<% end %>
