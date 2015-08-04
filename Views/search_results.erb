@@ -1,0 +1,17 @@
+<h1>It's the search results!</h1>
+
+<script>
+
+</script>
+
+
+<table>
+  <thead>
+    <th>Name</th><th>ABV</th><th>Description</th>
+  </thead>
+    <% @search_results["data"].each do |beer| %>
+  <tr>
+    <td><%= beer["name"]  %> </td><td><%= beer["abv"] %></td><td><%= beer["description"] %></td>
+  </tr>
+<% end %>
+</table>
