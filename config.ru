@@ -10,3 +10,6 @@ map('/') {run HomeController}
 map('/users') {run UsersController}
 map('/beers') {run EntriesController}
 map('/search_results') {run HomeController}
+map('/new_user') {run UsersController}
+map('/login') {run UsersController}
+# map ('/new_user') {run UsersController}

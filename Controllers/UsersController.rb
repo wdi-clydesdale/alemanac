@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
   def does_user_exist?(username)
-    user = UsersModel.find_by(:name => username.to_s)
+    user = UsersModel.find_by(:username => username.to_s)
     if user
       return TRUE
     else
@@ -9,11 +9,12 @@ class UsersController < ApplicationController
     end
   end
 
-  def is_authenticated?
-    user_session = session[:user].nil?
+  def is_not_authenticated?
+    session[:user].nil?
   end
 
   # enable[:sessions]
+  enable :sessions
 
   get '/new_user' do
       erb :new_user
@@ -24,24 +25,36 @@ class UsersController < ApplicationController
       puts '-------------'
       puts params
       puts '-------------'
-      if does_user_exist(params[:username]) == TRUE
-        @message = 'Username already exists'
+      @messsage = ' '
+
+
+
+      if does_user_exist?(params[:username]) == TRUE
+        @message = 'This username already exists'
         return erb :login_notice
       end
 
       password_salt = BCrypt::Engine.generate_salt
       password_hash = BCrypt::Engine.hash_secret(params[:password], password_salt)
 
-      newbie = UsersModel.new
-      newbie.username = params[:username]
-      newbie.password_hash = password_hash
-      newbie.password_salt = password_salt
-      newbie.save
+      new_user = UsersModel.new
+      new_user.username = params[:username]
+      new_user.email = params[:user_email]
+      new_user.first_name = params[:first_name]
+      new_user.last_name = params[:last_name]
+      new_user.password_hash = password_hash
+      new_user.password_salt = password_salt
+      new_user.save
 
-      @message = 'You have successfully registered!'
+      @message = 'You have successfully registered with Alemanac! Now, go find your favorite brews.'
 
 
       erb :login_notice
+
+  end
+
+  get '/login' do
+      erb :login
 
   end
   # login action
@@ -51,19 +64,20 @@ class UsersController < ApplicationController
     puts '-------------'
 
     @message = ''
-    if does_user_exist?(params[:name]) == false
+
+    if does_user_exist?(params[:username]) == false
       @message = 'Sorry... but that username does not exist.'
       return erb :login_notice
     end
 
     #find and get our user
-    username = UsersModel.where(:username => params[:name]).first!
+    user = UsersModel.where(:username => params[:username]).first!
 
     # does the password match?
     pwd = params[:password]
     if user.password_hash == BCrypt::Engine.hash_secret(pwd, user.password_salt)
       @message = 'You have been logged in successfully'
-      sessions[:user] = true
+      session[:user] = true
       return erb :login_notice
     else
       @message = 'Sorry but your password does not match'
@@ -73,10 +87,18 @@ class UsersController < ApplicationController
   end
 
 
-  get '/logout' do
+  get 'users/logout' do
     session[:user] = nil
     redirect '/'
   end
 
+  get '/new_results' do
+    if is_not_authenticated? == false
+      return erb :search_results
+    else
+      @message = "Sorry, but you must have an Alemanac account to save new beer journal entries. Please register. "
+      return erb :login-notice
+    end
+  end
 
 end

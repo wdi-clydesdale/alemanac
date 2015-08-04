@@ -17,7 +17,36 @@
     </thead>
       <% @search_results["data"].each do |beer| %>
     <tr>
-      <td><%= beer["id"]  %> </td><td><%= beer["name"]  %> </td><td><%= beer["style"]  %> </td><td><%= beer["abv"] %></td><td><%= beer["labels"] %></td><td><%= beer["glass"] %><td><%= beer["description"] %></td>
+      <td><%= beer["id"]  %> </td><td><%= beer["name"]  %> </td>
+
+      <td>
+
+        <% s = beer.has_key?("style") %>
+
+        <% if s == true %>
+
+          <% t = beer["style"] %>
+
+          <% if t.has_key?("category") %>
+
+          <%= t["category"]["name"] %>
+
+
+
+          <% end %>
+
+        <% else %>
+
+          No category available.
+
+        <% end %>
+
+      </td>
+
+      <td><%= beer["abv"] %></td>
+      <td><%= beer["labels"] %></td>
+      <td><%= beer["glass"] %></td>
+      <td><%= beer["description"] %></td>
     </tr>
   <% end %>
   </table>
