@@ -4,14 +4,15 @@
 
 </script>
 
-
-<table>
-  <thead>
-    <th>Name</th><th>ABV</th><th>Description</th>
-  </thead>
-    <% @search_results["data"].each do |beer| %>
-  <tr>
-    <td><%= beer["name"]  %> </td><td><%= beer["abv"] %></td><td><%= beer["description"] %></td>
-  </tr>
-<% end %>
-</table>
+<div class="table-responsive">
+  <table class="table table-bordered">
+    <thead>
+      <th>ID</th><th>Name</th><th>ABV</th><th>Label</th><th>Glass</th><th>Description</th>
+    </thead>
+      <% @search_results["data"].each do |beer| %>
+    <tr>
+      <td><%= beer["id"]  %> </td><td><%= beer["name"]  %> </td><td><%= beer["abv"] %></td><td><%= beer["labels"] %></td><td><%= beer["glass"] %><td><%= beer["description"] %></td>
+    </tr>
+  <% end %>
+  </table>
+</div> <!-- end table-resposive div -->
