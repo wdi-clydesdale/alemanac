@@ -4,6 +4,7 @@ Dir.glob('./{controllers,models}/*.rb').each {
   |file| require file
 }
 
+# map controllers
 
 map('/') {run HomeController}
 map('/users') {run UsersController}

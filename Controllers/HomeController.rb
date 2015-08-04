@@ -13,7 +13,21 @@ class HomeController < ApplicationController
     #puts @search_string
     @search_string = params[:search_string]
     puts 'Hey, this:' + @search_string
-    @search_results = HTTParty.get('http://api.brewerydb.com/v2/search?q=' + @search_string, {:query => {:key => 'fdf1b28c011f27510720ab3070943f3e'} })
+    @search_results = HTTParty.get('http://api.brewerydb.com/v2/beers?glasswareId=3', {:query => {:key => 'fdf1b28c011f27510720ab3070943f3e'} })
+
+  # Load beers table
+  #
+    # beers = beers.new #create a new instance
+
+    mydata = @search_results["data"][0]
+    puts mydata
+
+    temp =  @search_results["data"][0]["labels"]["medium"]
+    puts temp.to_s
+    temp =  @search_results["data"][4]["labels"]["medium"]
+    puts temp.to_s
+    temp =  @search_results["data"][7]["labels"]["medium"]
+    puts temp.to_s
     # @search_results.save
 
     # puts @search_results["data"] # the data key contains all beer info and is an array

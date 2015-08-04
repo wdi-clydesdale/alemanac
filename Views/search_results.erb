@@ -4,14 +4,20 @@
 
 </script>
 
+<img src=  <%= @search_results["data"][0]["labels"]["medium"] %>
+<img src=  <%= @search_results["data"][4]["labels"]["medium"] %>
+<img src=  <%= @search_results["data"][7]["labels"]["medium"] %>
+
+
+
 <div class="table-responsive">
   <table class="table table-bordered">
     <thead>
-      <th>ID</th><th>Name</th><th>ABV</th><th>Label</th><th>Glass</th><th>Description</th>
+      <th>ID</th><th>Name</th><th>Style</th><th>ABV</th><th>Label</th><th>Glass</th><th>Description</th>
     </thead>
       <% @search_results["data"].each do |beer| %>
     <tr>
-      <td><%= beer["id"]  %> </td><td><%= beer["name"]  %> </td><td><%= beer["abv"] %></td><td><%= beer["labels"] %></td><td><%= beer["glass"] %><td><%= beer["description"] %></td>
+      <td><%= beer["id"]  %> </td><td><%= beer["name"]  %> </td><td><%= beer["style"]  %> </td><td><%= beer["abv"] %></td><td><%= beer["labels"] %></td><td><%= beer["glass"] %><td><%= beer["description"] %></td>
     </tr>
   <% end %>
   </table>

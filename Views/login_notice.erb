@@ -1,0 +1,8 @@
+<h1>User already exists!</h1>
+
+<%= @message %>
+
+<% if session[:user].nit? == false %>
+  Thanks for using session support, <strong><%= session[:user].name %></strong>,<br>
+  You may also <a href='/logout'>logout and clear your session</a>
+<% end %>
