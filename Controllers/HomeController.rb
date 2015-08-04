@@ -15,7 +15,7 @@ class HomeController < ApplicationController
     puts 'Hey, this:' + @search_string
     @search_results = HTTParty.get('http://api.brewerydb.com/v2/beers?glasswareId=3', {:query => {:key => 'fdf1b28c011f27510720ab3070943f3e'} })
 
-    
+
 
   # Load beers table
   #
