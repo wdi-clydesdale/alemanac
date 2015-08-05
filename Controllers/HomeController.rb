@@ -46,6 +46,9 @@ class HomeController < ApplicationController
       search_param = params[:search_string]
     end
     @search_results = HTTParty.get('http://api.brewerydb.com/v2/' + search_param + "&key=fdf1b28c011f27510720ab3070943f3e")
+    @search_results["data"].each do |beer|
+      puts @search_results["data"] @search_
+    end if
 
     #testing output
     # puts @search_results # the data key contains all beer info and is an array
