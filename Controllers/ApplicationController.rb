@@ -7,6 +7,10 @@ class ApplicationController < Sinatra::Base
     :database => 'alemanac'
     )
 
+    # enable[:sessions]
+    enable :sessions
+
+
   set :views, File.expand_path('../../views',__FILE__)
   # set :public_folder, File.expand_path('../../Public',__FILE__)
   set :public_dir, File.expand_path('../../public', __FILE__)

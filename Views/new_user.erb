@@ -1,10 +1,45 @@
-<h2>Register a new Alemanac Account </h2>
+<div class ='containter'>
+<form class="form-horizontal" action="register" method="post">
+  <fieldset>
+    <legend><h2>Create a New Alemanac Account</h2></legend>
+    <br>
+      <div class="form-group">
+        <label for="inputName" class="col-md-3 control-label">First Name</label>
+          <div class="col-md-5">
+            <input type="text" class="form-control" id="inputName" name="first_name"  placeholder="First Name">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputLastName" class="col-md-3 control-label">Last Name</label>
+            <div class="col-md-5">
+              <input type="text" class="form-control" id="inputLastName" name="last_name"  placeholder="Last Name">
+            </div>
+          </div>
+        <div class="form-group">
+          <label for="inputUsername" class="col-md-3 control-label">Choose a Username</label>
+            <div class="col-md-5">
+              <input type="text" class="form-control" id="inputUserName" name="username"  placeholder="Username">
+            </div>
+          </div>
+        <div class="form-group">
+          <label for="inputEmail" class="col-md-3 control-label">Email</label>
+            <div class="col-md-5">
+              <input type="email" class="form-control" id="inputEmail" name="user_email"  placeholder="Email Address">
+            </div>
+          </div>
+        <div class="form-group">
+          <label for="inputPass" class="col-md-3 control-label">Password</label>
+            <div class="col-md-5">
+              <input type="password" class="form-control" id="inputPass" name="password"  placeholder="Password">
+            </div>
+          </div>
 
-<form class="" action="register" method="post">
-  <input type="text" name="first_name"  placeholder="First Name">
-  <input type="text" name="last_name" placeholder="Last Name">
-  <input type="text" name="username" placeholder="Choose a username">
-  <input type="email" name="user_email" placeholder="email address">
-  <input type="password" name="password" placeholder="password">
-  <input type="submit" value="Register">
+      <div class="form-group">
+        <div class="col-md-10 col-md-offset-3">
+          <button type="reset" class="btn btn-warning btn-lg">Cancel</button>
+          <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+        </div>
+    </fieldset>
 </form>
+</div>
+</div>

@@ -13,8 +13,6 @@ class UsersController < ApplicationController
     session[:user].nil?
   end
 
-  # enable[:sessions]
-  enable :sessions
 
   get '/new_user' do
       erb :new_user
@@ -71,13 +69,15 @@ class UsersController < ApplicationController
     end
 
     #find and get our user
-    user = UsersModel.where(:username => params[:username]).first!
+    @user = UsersModel.where(:username => params[:username]).first!
 
     # does the password match?
     pwd = params[:password]
-    if user.password_hash == BCrypt::Engine.hash_secret(pwd, user.password_salt)
+    if @user.password_hash == BCrypt::Engine.hash_secret(pwd, @user.password_salt)
       @message = 'You have been logged in successfully'
-      session[:user] = true
+      session[:user] = @user
+      # puts @user.id
+      # puts session[:user].id
       return erb :login_notice
     else
       @message = 'Sorry but your password does not match'

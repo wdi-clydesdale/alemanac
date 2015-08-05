@@ -6,6 +6,7 @@ class HomeController < ApplicationController
     # until $i > 170 do
     #   styles = HTTParty.get('http://api.brewerydb.com/v2/style/' + $i.to_s, {:query => {:key => 'fdf1b28c011f27510720ab3070943f3e'} })
     #   # puts styles[0]
+    #   puts styles[0]
     #   $i +=1
     # end
     erb :index

@@ -6,7 +6,7 @@ CREATE TABLE users (id SERIAL PRIMARY KEY, first_name varchar(25), last_name var
 
 CREATE TABLE entries (id SERIAL PRIMARY KEY, user_id INT references users(id), beer_id INT, notes text, vote INT, consume_location varchar(100), consume_date date, entry_date timestamp, is_custom boolean, beer_name varchar(30), brewery varchar(50), brew_location varchar(50), abv real);
 
-CREATE TABLE beers (id SERIAL PRIMARY KEY, beer_id INT, name varchar(50), style varchar(50), brewery varchar(50), brew_location varchar(50), glass varchar(25), apv real, label_img varchar(255));
+CREATE TABLE beers (id SERIAL PRIMARY KEY, beer_id INT, name varchar(50), style varchar(50), brewery varchar(50), brew_location varchar(50), glass varchar(25), abv real, label_img varchar(255));
 
 CREATE TABLE styles (id SERIAL PRIMARY KEY, beer_style_id INT, beer_style_name varchar(50));
 
