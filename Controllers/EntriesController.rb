@@ -6,6 +6,20 @@ class EntriesController < ApplicationController
     erb :new_entry
   end
 
+  post '/new_api_entry' do
+
+    puts '---------'
+    puts params
+    puts '---------'
+
+    @beer_name = params['beer_name']
+    @beer_brewery = ''
+    @beer_abv = params['abv']
+
+    erb :new_entry_from_api
+
+  end
+
   post '/new' do
 
     puts '---------'
@@ -13,7 +27,7 @@ class EntriesController < ApplicationController
     puts user = session[:user]
     puts '---------'
 
-    puts 
+    puts
 
     @beer = EntriesModel.new
 

@@ -42,6 +42,14 @@
         <% end %>
       </td>
       <td><%= beer["description"] %></td>
+      <td>
+      <form action="/beers/new_api_entry" method="post">
+        <input type="hidden" name="beer_name" value='<%= beer["name"] %>'>
+        <input type="hidden" name="abv" value="<%= beer["abv"] %>">
+        <!-- <input type="hidden" name="beer_name" value="<%= beer["name"] %>"> add brewery!-->
+        <input type="submit" value="Add to Journal">
+      </form>
+      </td>
     </tr>
   <% end %>
   </table>

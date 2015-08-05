@@ -9,51 +9,41 @@
 
           <div class="dropdown">
             <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-              Dropdown
+              Style Category
               <span class="caret"></span>
             </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li><a href="#">Separated link</a></li>
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li><a href="#">Separated link</a></li>
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li><a href="#">Separated link</a></li>
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li><a href="#">Separated link</a></li>
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li><a href="#">Separated link</a></li>
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li><a href="#">Separated link</a></li>
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li><a href="#">TEN</a></li>
-              <li><a href="#">Separated link</a></li>
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li><a href="#">FIVE</a></li>
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li><a href="#">ONE</a></li>
-            </ul>
+            <ol name="beerStyleCategories" class="dropdown-menu" aria-labelledby="dropdownMenu1">
+              <li selected value="base">Please Select</a></li>
+              <li><a href="#">Belgian And French Origin Ales</a></li>
+              <li><a href="#">British Origin Ales</a></li>
+              <li><a href="#">European-germanic Lager</a></li>
+              <li><a href="#">German Origin Ales</a></li>
+              <li><a href="#">Hybrid-Mixed Beer</a></li>
+              <li><a href="#">International Ale Styles</a></li>
+              <li><a href="#">International Styles</a></li>
+              <li><a href="#">Irish Origin Ales</a></li>
+              <li><a href="#">Malternative Beverages</a></li>
+              <li><a href="#">Mead Cider and Perry</a></li>
+              <li><a href="#">North American Lager</a></li>
+              <li><a href="#">North American Origin Ales</a></li>
+              <li><a href="#">Other Lager</a></li>
+              <li><a href="#">Other Origin</a></li>
+            </ol>
           </div>
-
+          <!-- Second dropdown selects beer style after beer style category is chosen -->
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              Style
+              <span class="caret"></span>
+            </button>
+            <select name="beerStyles" class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <li><a href="#">Choose a Style Category First</a></a></li>
+              <!-- menu items loaded dynamically in app.js -->
+            </select>
+          </div>
         </div>
+
+
+      </div>
       </div><!-- end row -->
           <div class='col-md-6'>
               <div class="input-group">
