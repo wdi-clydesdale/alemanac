@@ -1,4 +1,5 @@
 var app = app || {};
+app.
 
 $("#dropdownMenu1").change(function() {
    $("#dropdownMenu2").load("Menu/" + $(this).val() + ".txt");
