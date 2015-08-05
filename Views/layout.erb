@@ -12,18 +12,42 @@
   <body>
     <div class='wrapper'>
 
+<!-- NAV BAR -->
+        <nav class="navbar navbar-default navbar-static-top">
+            <div class="container">
+              <!-- Brand and toggle get grouped for better mobile display -->
+                  <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">Alemanac</a>
+                  </div>
+                  <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                      <ul class="nav navbar-nav">
+                        <li class="active"><a href="/users/login">Login<span class="sr-only">(current)</span></a></li>
+                        <li><a href="#">My Alemanac</a></li>
+                        <li><a href="/beers/new">Add New Beer</a></li>
+                          <li><a href="/users/new_user">Create Account</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </nav>
 
-      <div class='container header'>
+
+
+
+
+
         <div class='row'>
           <div class='col-md-4'>
             <h1>Welcome to Alemanac!</h1>
           </div>
-          <div class='col-md-8'>
-            <h3>Nav Bar etc. goes here eventually!<a href='/users/new_user'>Register</a> <a href='/users/login'> Login </a></h3> <a href='/beers/new'>ADD NEW BEER</a></h3>
-          </div>
-        </div><!--This closes the header row -->
-      </div> <!--This close the header container -->
-    </div> <!--This closes the wrapper -->
+        </div>
+
 
     <%= yield %>
 
