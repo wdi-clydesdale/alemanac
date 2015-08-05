@@ -1,20 +1,14 @@
 <h1>It's the search results!</h1>
 
-<script>
-
-</script>
-
-
-
-
 <div class="table-responsive">
   <table class="table table-bordered">
     <thead>
       <th>ID</th><th>Name</th><th>Style</th><th>ABV</th><th>Label</th><th>Glass</th><th>Description</th>
     </thead>
-      <% @myhash["data"].each do |beer| %>
+      <% @search_results["data"].each do |beer| %>
     <tr>
       <td><%= beer["id"]  %> </td><td><%= beer["name"]  %> </td>
+
       <td>
         <% s = beer.has_key?("style") %>
         <% if s == true %>
