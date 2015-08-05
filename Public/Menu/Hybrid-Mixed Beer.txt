@@ -1,0 +1,37 @@
+<option>Brett</option>
+<option>Session</option>
+<option>Cream Ale</option>
+<option>California Common</option>
+<option>Gingo/Sake</option>
+<option>Wheat Ale</option>
+<option>Wheat Ale</option>
+<option>Fruit Wheat Ale</option>
+<option>Dark Wheat Ale</option>
+<option>Dark Wheat Ale</option>
+<option>Rye Ale</option>
+<option>German Rye</option>
+<option>Fruit Beer</option>
+<option>Field Beer</option>
+<option>Pumpkin Beer</option>
+<option>Chocolate Beer</option>
+<option>Coffee Beer</option>
+<option>Spice Beer</option>
+<option>Specialty</option>
+<option>Honey Beer</option>
+<option>Gluten-Free Beer</option>
+<option>Indigenous Beer</option>
+<option>Smoke Beer</option>
+<option>Experimental Beer</option>
+<option>Traditional</option>
+<option>BBL Aged</option>
+<option>BBL Aged Pale</option>
+<option>BBL Aged Dark</option>
+<option>BBL Aged Strong</option>
+<option>BBL Aged Sour</option>
+<option>Aged Beer</option>
+<option>Strong Ale</option>
+<option>Non-Alcoholic</option>
+<option>Belgian Fruit</option>
+<option>Chili Beer</option>
+<option>Mixed Brett</option>
+<option>Wild Beer</option>

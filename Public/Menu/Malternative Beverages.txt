@@ -1,0 +1,2 @@
+<option>Flavored Malt Beverage</option>
+<option>Energy Malt Beverage</option>
