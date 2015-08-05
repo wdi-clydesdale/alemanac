@@ -11,17 +11,16 @@ class HomeController < ApplicationController
     @search_string = EntriesModel.new
     #puts @search_string
     @search_string = params[:search_string]
-  @search_results = HTTParty.get('http://api.brewerydb.com/v2/beers?styleId=' + @search_string, {:query => {:key => 'fdf1b28c011f27510720ab3070943f3e'} })
-  num_of_adds = @search_results["numberOfPages"] - 1 # have to merge hashes this many times
-  puts 'num of adds' + num_of_adds.to_s
-  num_of_adds.times do |i|
-    @next_results = HTTParty.get('http://api.brewerydb.com/v2/beers?styleId=' + @search_string + '&p=' + i.to_s, {:query => {:key => 'fdf1b28c011f27510720ab3070943f3e'} })
-    if i == 2
-      puts @next_results
+    @search_results = HTTParty.get('http://api.brewerydb.com/v2/beers?styleId=' + @search_string, {:query => {:key => 'fdf1b28c011f27510720ab3070943f3e'} })
+    pages = @search_results["numberOfPages"] - 1 # have to merge hashes this many times
+    pages.times do |i|
+      @search_results.each do |j|
+        beer_id[k] = @search_results["data"][0]["id"]
+        puts beer_id[k]
+        k += 1
+      end
     end
-    @search_results.merge!(@next_results)
 
-  end
   # puts @search_results.to_json
 
 
