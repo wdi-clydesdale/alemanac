@@ -13,6 +13,8 @@ class EntriesController < ApplicationController
     puts user = session[:user]
     puts '---------'
 
+    puts 
+
     @beer = EntriesModel.new
 
     @beer.beer_name = params[:beer_name]

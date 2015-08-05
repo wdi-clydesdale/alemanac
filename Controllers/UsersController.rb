@@ -13,8 +13,6 @@ class UsersController < ApplicationController
     session[:user].nil?
   end
 
-  # enable[:sessions]
-  enable :sessions
 
   get '/new_user' do
       erb :new_user
