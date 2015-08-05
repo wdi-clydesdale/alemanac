@@ -1,0 +1,11 @@
+<option>American Lager</option>
+<option>American Light Lager</option>
+<option>American Low-Carb Lager</option>
+<option>American Amber Lager</option>
+<option>American Premium Lager</option>
+<option>American Pilsener</option>
+<option>American Ice Lager</option>
+<option>Malt Liquor</option>
+<option>American Amber Lager</option>
+<option>American Oktoberfest</option>
+<option>American Dark Lager</option>

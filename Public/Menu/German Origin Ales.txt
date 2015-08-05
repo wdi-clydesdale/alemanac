@@ -1,0 +1,13 @@
+<option>Kolsch</option>
+<option>Berlinerweisse</option>
+<option>Leipzig Gose</option>
+<option>Hefeweizen</option>
+<option>Kristallweizen</option>
+<option>Leichtesweizen</option>
+<option>Bernsteinfarbenesweizen</option>
+<option>Dunkelweizen</option>
+<option>Weizenbock</option>
+<option>Rauchbier</option>
+<option>Altbier</option>
+<option>Kellerbier</option>
+<option>Adambier</option>
