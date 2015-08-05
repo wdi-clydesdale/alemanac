@@ -8,28 +8,28 @@ class HomeController < ApplicationController
 
 
   post '/' do
-    puts params
     @search_string = EntriesModel.new
     #puts @search_string
     @search_string = params[:search_string]
-    puts 'Hey, this:' + @search_string
-    @search_results = HTTParty.get('http://api.brewerydb.com/v2/beers?glasswareId=3', {:query => {:key => 'fdf1b28c011f27510720ab3070943f3e'} })
+  @search_results = HTTParty.get('http://api.brewerydb.com/v2/beers?styleId=' + @search_string, {:query => {:key => 'fdf1b28c011f27510720ab3070943f3e'} })
+  num_of_adds = @search_results["numberOfPages"] - 1 # have to merge hashes this many times
+  puts 'num of adds' + num_of_adds.to_s
+  num_of_adds.times do |i|
+    @next_results = HTTParty.get('http://api.brewerydb.com/v2/beers?styleId=' + @search_string + '&p=' + i.to_s, {:query => {:key => 'fdf1b28c011f27510720ab3070943f3e'} })
+    if i == 2
+      puts @next_results
+    end
+    @search_results.merge!(@next_results)
 
+  end
+  # puts @search_results.to_json
 
 
   # Load beers table
   #
     # beers = beers.new #create a new instance
 
-    mydata = @search_results["data"][0]
-    puts mydata
 
-    temp =  @search_results["data"][0]["labels"]["medium"]
-    puts temp.to_s
-    temp =  @search_results["data"][4]["labels"]["medium"]
-    puts temp.to_s
-    temp =  @search_results["data"][7]["labels"]["medium"]
-    puts temp.to_s
     # @search_results.save
 
     # puts @search_results["data"] # the data key contains all beer info and is an array
