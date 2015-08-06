@@ -1,56 +1,61 @@
 <h1> My Alemanac </h1>
 
-<table>
-  <thead>
-        <th>
-          Beer
-        </th>
-        <th>
-          Brewery
-        </th>
-        <th>
-          ABV
-        </th>
-        <th>
-          Brewery Location
-        </th>
-        <th>
-          Location of Consumption
-        </th>
-        <th>
-          Rating
-        </th>
-        <th>
-          Notes
-        </th>
-  </thead>
-  <tbody>
-      <% @entries.each do |entry| %>
-      <tr>
-        <td>
-          <%= entry.beer_name %>
-        </td>
-        <td>
-          <%= entry.brewery_name %>
-        </td>
-        <td>
-          <%= entry.abv%>
-        </td>
-        <td>
-          <%= entry.brew_location %>
-        </td>
-        <td>
-          <%= entry.consume_location %>
-        </td>
-        <td>
-          <%= entry.vote %>
-        </td>
-        <td>
+
+<% if @entries != nil %>
+  we have ze beers
+
+  <table>
+    <thead>
+          <th>
+            Beer
+          </th>
+          <th>
+            Brewery
+          </th>
+          <th>
+            ABV
+          </th>
+          <th>
+            Brewery Location
+          </th>
+          <th>
+            Location of Consumption
+          </th>
+          <th>
+            Rating
+          </th>
+          <th>
+            Notes
+          </th>
+    </thead>
+    <tbody>
+         <% @entries.map do |entry| %>
+         <tr>
           <td>
-            <%= entry.notes %>
+            <%= entry.beer_name %>
           </td>
-          <!-- <a href='/coupons/edit/<%= coupon.id %>'>Edit</a> -->
-      </tr>
-      <% end %>
-  </tbody>
-</table>
+          <td>
+            <%= entry.abv%>
+          </td>
+          <td>
+            <%= entry.brew_location %>
+          </td>
+          <td>
+            <%= entry.consume_location %>
+          </td>
+          <td>
+            <%= entry.vote %>
+          </td>
+          <td>
+            <td>
+              <%= entry.notes %>
+            </td>
+        </tr>
+        <% end %>
+    </tbody>
+  </table>
+
+
+<% else %>
+  no beers :(
+<% end %>

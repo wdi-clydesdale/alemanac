@@ -58,9 +58,24 @@ class EntriesController < ApplicationController
   end
 
   get '/my_alemanac' do
-    @user=session[:user]
-    @entries=@user.entries.all
+    # @user=session[:user]
+    @current_user = session[:user]
+    # @user_id=@user.user_id
+    # @entries=Entries.where(user_id: session[:current_user].id)
+    @all_entries = EntriesModel.all
+    @entries = Array.new
+    @all_entries.each do |entry|
+
+      if entry.user_id == @current_user.id
+        @entries.push(entry)
+      end
+
+    end
+    puts @current_user.id
+    # @reviews = product.reviews.select! { |s| s.user_id == current_user.id } unless admin?
     erb :user_journal
   end
+
+
 
 end

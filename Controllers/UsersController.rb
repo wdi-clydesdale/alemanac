@@ -97,7 +97,7 @@ class UsersController < ApplicationController
       return erb :search_results
     else
       @message = "Sorry, but you must have an Alemanac account to save new beer journal entries. Please register. "
-      return erb :login-notice
+      return erb :login_notice
     end
   end
 
