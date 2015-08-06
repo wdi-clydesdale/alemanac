@@ -13,3 +13,7 @@
 #beer-facts {
   width: 30%;
 }
+
+#beerstyles {
+  display: inline-grid;
+}
