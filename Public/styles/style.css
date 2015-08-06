@@ -1,1 +1,6 @@
-
+#style_display {
+  height: 2rem;
+}
+#styleId {
+  display: none;
+}
