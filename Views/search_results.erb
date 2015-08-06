@@ -3,11 +3,11 @@
 <div class="table-responsive">
   <table class="table table-bordered">
     <thead>
-      <th>ID</th><th>Name</th><th>Style</th><th>ABV</th><th>Label</th><th>Glass</th><th>Description</th>
+      <th>Name</th><th>Style</th><th>ABV</th><th>Label</th><th>Glass</th><th>Save?</th>
     </thead>
       <% @search_results["data"].each do |beer| %>
     <tr>
-      <td><%= beer["id"]  %> </td><td><%= beer["name"]  %> </td>
+      <td><%= beer["name"]  %> </td>
 
       <td>
         <% s = beer.has_key?("style") %>
@@ -26,9 +26,22 @@
         <% s = beer.has_key?("labels") %>
         <% if s == true %>
           <% t = beer["labels"] %>
-          <img src='<%= t["medium"] %>'>
+          <a class="beerpopoverData btn" href="#"
+           data-content='<%= beer["description"] %>'
+            rel="popover" data-placement="bottom"
+             data-original-title="Description" data-trigger="hover">
+             <img src='<%= t["medium"] %>'>
+          </a>
         <% else %>
-          <img src='/images/generic-beer.png'>
+        <!-- attempt to do a popover-->
+
+          <a class="beerpopoverData btn" href="#"
+            data-content='<%= beer["description"] %>'
+            rel="popover" data-placement="bottom"
+            data-original-title="Description" data-trigger="hover">
+            <img src='/images/generic-beer.png'>
+          </a>
+
         <% end %>
 
       </td>
@@ -41,7 +54,6 @@
           No category available.
         <% end %>
       </td>
-      <td><%= beer["description"] %></td>
       <td>
       <form action="/beers/new_api_entry" method="post">
         <input type="hidden" name="beer_name" value='<%= beer["name"] %>'>

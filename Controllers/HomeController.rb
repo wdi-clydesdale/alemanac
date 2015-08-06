@@ -14,6 +14,7 @@ class HomeController < ApplicationController
     erb :index
 
   end
+
   # It's unwise to use key like this (visible in public repository),
   # but we don't yet know how to hide it
 
@@ -30,20 +31,15 @@ class HomeController < ApplicationController
 
     if params[:min_abv] != ''
       abv_range = params[:min_abv].to_s
-      puts 'AAAA' + abv_range
       if params[:max_abv] != ''
         abv_range = abv_range + ',' + params[:max_abv].to_s
-        puts 'BBBB' + abv_range
       else
         abv_range = '+' + abv_range
-        puts 'CCCC' + abv_range
       end
     elsif params[:max_abv] != nil
       abv_range = '-' + params[:max_abv].to_s
-      puts 'DDDD' + abv_range
     else
       abv_range = '0,20'
-      puts 'EEEE' + abv_range
     end
 
     #testing output
@@ -57,7 +53,9 @@ class HomeController < ApplicationController
       end if
       search_param = 'beers?styleId=' + params[:styleId].to_s + '?abv=' +  abv_range
     else #release the constraints of style and abv if search box is used
-      search_param = 'search?q=' + params[:search_string] + '?abv=' +  abv_range
+      # note: API search ORs multiple words. For sake of rapid deployment, our search will
+      # only consider the first word
+      search_param = 'search?q=' + params[:search_string].partition(" ").first + '?abv=' +  abv_range
     end
     puts search_param
     @search_results = HTTParty.get('http://api.brewerydb.com/v2/' + search_param + "&key=fdf1b28c011f27510720ab3070943f3e")

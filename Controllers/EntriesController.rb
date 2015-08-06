@@ -61,6 +61,8 @@ class EntriesController < ApplicationController
     @entries=EntriesModel.where(entries.user_id = session[:user].id)
 
   end
+
+  get '/user_journal' do
     erb :user_journal
   end
 
