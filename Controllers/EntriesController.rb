@@ -57,4 +57,11 @@ class EntriesController < ApplicationController
     erb :new_entry_success
   end
 
+  get '/my_alemanac' do
+    @entries=EntriesModel.where(entries.user_id = session[:user].id)
+
+  end
+    erb :user_journal
+  end
+
 end
