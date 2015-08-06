@@ -1,0 +1,53 @@
+<h1> My Alemanac </h1>
+
+<table>
+  <thead>
+        <th>
+          Beer
+        </th>
+        <th>
+          Brewery
+        </th>
+        <th>
+          ABV
+        </th>
+        <th>
+          Brewery Location
+        </th>
+        <th>
+          Location of Consumption
+        </th>
+        <th>
+          Rating
+        </th>
+        <th>
+          Notes
+        </th>
+  </thead>
+  <tbody>
+      <% @coupons.each do |coupon| %>
+      <tr>
+        <td>
+          <%= coupon.id %>
+        </td>
+        <td>
+          <%= coupon.title %>
+        </td>
+        <td>
+          <%= coupon.description%>
+        </td>
+        <td>
+          <%= coupon.product %>
+        </td>
+        <td>
+          <%= coupon.discount %>
+        </td>
+        <td>
+          <%= coupon.exp_date %>
+        </td>
+        <td>
+          <a href='/coupons/edit/<%= coupon.id %>'>Edit</a>
+      </tr>
+      <% end %>
+  </tbody>
+</table>

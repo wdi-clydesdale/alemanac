@@ -14,7 +14,6 @@ class HomeController < ApplicationController
     erb :index
 
   end
-
   # It's unwise to use key like this (visible in public repository),
   # but we don't yet know how to hide it
 
