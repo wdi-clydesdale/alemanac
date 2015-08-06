@@ -37,6 +37,7 @@
          <% @entries.map do |entry| %>
          <tr>
           <td>
+            <%= entry.id %> --
             <%= entry.beer_name %>
           </td>
           <td>
@@ -59,9 +60,12 @@
             </td>
             <td>
             <form action="/beers/delete" method="post">
-                <input type="hidden" name="id" value='<%= @entry.id %>'>
+              <%= entry.id %>
+                <input type="hidden" name="beer_id" value="<%= entry.id %>">
                 <input type="submit" value='Delete Entry'>
+              </form>
               </td>
+
         </tr>
         <% end %>
     </tbody>

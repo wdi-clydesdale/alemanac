@@ -1,6 +1,6 @@
 class EntriesController < ApplicationController
 
-@beer =
+# @beer =
 
   get '/new' do
     erb :new_entry
@@ -113,35 +113,41 @@ class EntriesController < ApplicationController
   end
 
 
-  get '/edit/:id' do
-  @id = params[:id]
-  @beer = EntriesModel.find(@id)
+  get '/edit_entry/:id' do
+    @id = params[:id]
+    @entry = EntriesModel.find(@id)
 
-  erb :edit_entry
-end
+    erb :edit_entry
+  end
 
-      post '/edit' do
-      @beer = EntriesModel.find(params[:id])
-      @beer.name = params[:beer_name]
-      @beer.abv = params[:abv]
-      @beer.consume_location = params[:consume_location]
-      @beer.vote = params[:vote]
-      @beer.notes = params[:notes]
-      @beer.save
+  post '/edit' do
+    puts '------yoloswag------'
+    puts params
+    puts '------yoloswag------'
 
-      erb :entry_edit_success
-    end
+    @entry = EntriesModel.find(params[:id])
+    @entry.beer_name = params[:beer_name]
+    @entry.abv = params[:abv]
+    @entry.consume_location = params[:consume_location]
+    @entry.vote = params[:vote]
+    @entry.notes = params[:notes]
+    @entry.save
 
-
-
+    erb :entry_edit_success
+  end
 
 ##delete
 
-
   post '/delete' do
-     @id = params[:id]
-     @beer = EntriesModel.find(@id)
-     @beer.destroy
+     @id = params[:beer_id]
+     @entry = EntriesModel.find(@id)
+
+     puts '---'
+     puts params
+     puts @entry.beer_name
+     puts '---'
+
+     @entry.destroy
 
      erb :entry_delete_success
     end
