@@ -9,3 +9,7 @@
   background-image: url('/images/cropped-stock-photo-beer-tasting-189516968.jpg');
   /*background-image: url('/images/cropped-stock-photo-beer-bubbles-in-the-high-magnification-and-close-up-124784641.jpg');*/
 }
+
+#beer-facts {
+  width: 30%;
+}
