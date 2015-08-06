@@ -10,6 +10,13 @@ class EntriesController < ApplicationController
     erb :new_entry_from_api
   end
 
+  post'/new_api_entry_add' do
+    @beer_name = params['beer_name']
+    @beer_abv = params['abv']
+    @notes = params['notes']
+    erb :new_entry_from_api
+  end
+
   post '/new_api_entry' do
 
     puts '---------'
