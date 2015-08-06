@@ -1,23 +1,22 @@
 <h1> My Alemanac </h1>
 
-
+<div class = 'container'>
 <% if @entries != nil %>
-  we have ze beers
-
-  <table>
+<div class="table-responsive">
+  <table class="table table-bordered">
     <thead>
           <th>
             Beer
           </th>
-          <th>
+          <!-- <th>
             Brewery
-          </th>
+          </th> -->
           <th>
             ABV
           </th>
-          <th>
+          <!-- <th>
             Brewery Location
-          </th>
+          </th> -->
           <th>
             Location of Consumption
           </th>
@@ -26,6 +25,12 @@
           </th>
           <th>
             Notes
+          </th>
+          <th>
+            Edit?
+          </th>
+          <th>
+            Delete?
           </th>
     </thead>
     <tbody>
@@ -37,25 +42,35 @@
           <td>
             <%= entry.abv%>
           </td>
-          <td>
+          <!-- <td>
             <%= entry.brew_location %>
-          </td>
+          </td> -->
           <td>
             <%= entry.consume_location %>
           </td>
           <td>
             <%= entry.vote %>
           </td>
-          <td>
             <td>
               <%= entry.notes %>
             </td>
+            <td>
+              <a href='/beers/edit_entry/<%= entry.id %>'>Edit</a>
+            </td>
+            <td>
+            <form action="/beers/delete" method="post">
+                <input type="hidden" name="id" value='<%= @entry.id %>'>
+                <input type="submit" value='Delete Entry'>
+              </td>
         </tr>
         <% end %>
     </tbody>
   </table>
+</div>
+</div>
+
 
 
 <% else %>
-  no beers :(
+  Sorry, you have no beer entries in your Alemanac journal. <a href = '/beers/new'>Add a new beer to your Alemanac </a>
 <% end %>

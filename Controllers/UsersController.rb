@@ -92,7 +92,7 @@ class UsersController < ApplicationController
     redirect '/'
   end
 
-  get '/new_results' do
+  get '/search_results' do
     if is_not_authenticated? == false
       return erb :search_results
     else

@@ -1,6 +1,6 @@
 class EntriesController < ApplicationController
 
-#@beer =
+@beer =
 
   get '/new' do
     erb :new_entry
@@ -112,6 +112,39 @@ class EntriesController < ApplicationController
     erb :user_journal
   end
 
+
+  get '/edit/:id' do
+  @id = params[:id]
+  @beer = EntriesModel.find(@id)
+
+  erb :edit_entry
+end
+
+      post '/edit' do
+      @beer = EntriesModel.find(params[:id])
+      @beer.name = params[:beer_name]
+      @beer.abv = params[:abv]
+      @beer.consume_location = params[:consume_location]
+      @beer.vote = params[:vote]
+      @beer.notes = params[:notes]
+      @beer.save
+
+      erb :entry_edit_success
+    end
+
+
+
+
+##delete
+
+
+  post '/delete' do
+     @id = params[:id]
+     @beer = EntriesModel.find(@id)
+     @beer.destroy
+
+     erb :entry_delete_success
+    end
 
 
 end
