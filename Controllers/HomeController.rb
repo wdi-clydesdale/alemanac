@@ -1,5 +1,7 @@
 class HomeController < ApplicationController
 
+  enable :sessions
+
   get '/' do
     # menu_hash = Hash.new { |hash, key| hash[key] =  }
     # $i = 1
@@ -27,23 +29,32 @@ class HomeController < ApplicationController
     # abv='+hi' (for hi and above)
 
     if params[:min_abv] != nil
-      abv_search = params[:min_abv].to_s
+      abv_range = params[:min_abv].to_s
       if params[:max_abv] != nil
-        abv_search = abv_search + params[:max_abv].to_s
+        abv_range = abv_range + ',' + params[:max_abv].to_s
       else
-        abv_search = '+' + abv_search
+        abv_range = '+' + abv_range
       end
     elsif params[:max_abv] != nil
-      abv_search = '-' + params[:max_abv].to_s
+      abv_range = '-' + params[:max_abv].to_s
+    else
+      abv_range = '0,20'
     end
-    #testing output
-    puts abv_search
 
-    if params[:search_string] = '' || nil
-      search_param = 'beers?styleId=' + params[:styleId].to_s
+    #testing output
+    puts params[:min_abv]
+    puts params[:max_abv]
+    puts abv_range
+
+    if params[:search_string] == '' || nil
+      if params[:styleId] == '' || nil
+        search_param = 'beers?abv=' + abv_range
+      end if
+      search_param = 'beers?styleId=' + params[:styleId].to_s + '?abv=' +  abv_range
     else #release the constraints of style and abv if search box is used
-      search_param = params[:search_string]
+      search_param = 'search?q=' + params[:search_string] + '?abv=' +  abv_range
     end
+    puts search_param
     @search_results = HTTParty.get('http://api.brewerydb.com/v2/' + search_param + "&key=fdf1b28c011f27510720ab3070943f3e")
 
     #testing output

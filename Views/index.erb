@@ -13,46 +13,39 @@
               <span class="caret"></span>
             </button>
             <ol name="beerStyleCategories" class="dropdown-menu" aria-labelledby="dropdownMenu1">
-              <li><a href="#">Belgian And French Origin Ales</a></li>
-              <li><a href="#">British Origin Ales</a></li>
-              <li><a href="#">European-germanic Lager</a></li>
-              <li><a href="#">German Origin Ales</a></li>
-              <li><a href="#">Hybrid-Mixed Beer</a></li>
-              <li><a href="#">International Ale Styles</a></li>
-              <li><a href="#">International Styles</a></li>
-              <li><a href="#">Irish Origin Ales</a></li>
-              <li><a href="#">Malternative Beverages</a></li>
-              <li><a href="#">Mead Cider and Perry</a></li>
-              <li><a href="#">North American Lager</a></li>
-              <li><a href="#">North American Origin Ales</a></li>
-              <li><a href="#">Other Lager</a></li>
-              <li><a href="#">Other Origin</a></li>
+              <li data-id="163"><a href="#">Belgian And French Origin Ales</a></li>
+              <li data-id="1"><a href="#">British Origin Ales</a></li>
+              <li data-id="80"><a href="#">European-germanic Lager</a></li>
+              <li data-id="92"><a href="#">German Origin Ales</a></li>
+              <li data-id="122"><a href="#">Hybrid-Mixed Beer</a></li>
+              <li data-id="73"><a href="#">International Ale Styles</a></li>
+              <li data-id="107"><a href="#">International Styles</a></li>
+              <li data-id="22"><a href="#">Irish Origin Ales</a></li>
+              <li data-id="161"><a href="#">Malternative Beverages</a></li>
+              <li data-id="151"><a href="#">Mead Cider and Perry</a></li>
+              <li data-id="99"><a href="#">North American Lager</a></li>
+              <li data-id="35"><a href="#">North American Origin Ales</a></li>
+              <li data-id="104"><a href="#">Other Lager</a></li>
+              <li data-id="160"><a href="#">Other Origin</a></li>
             </ol>
           </div>
-          <!-- Second dropdown selects beer style after beer style category is chosen -->
-            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-              Style
-              <span class="caret"></span>
-            </button>
-            <select name="beerStyles" class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                <li><a href="#">Choose a Style Category First</a></a></li>
-              <!-- menu items loaded dynamically in app.js -->
-            </select>
-          </div>
         </div>
-
 
       </div>
       </div><!-- end row -->
       <div class="col-md-12">
-        <h3>ABV Range (optional)</h3>
-        <input type="text" name="min-abv" placeholder="0">
-         to
-         <input type="text" name="max-abv" placeholder="20>"
+
       </div>
           <div class='col-md-6'>
               <div class="input-group">
                 <form action="/" method="post">
+                  <p id="style_display"></p>
+                  <h3>ABV Range (optional)</h3>
+                  <input type="text" name="min_abv" placeholder="0">
+                   to
+                   <input type="text" name="max_abv" placeholder="20">
+
+                  <input type="text" id="styleId" name="styleId">
                   <input type="text" name="search_string" class="form-control" placeholder="Search for beer...">
                   <span class="input-group-btn">
                   <!-- <button class="btn btn-default" type="button">Go!</button> -->
@@ -60,8 +53,11 @@
                   </span>
                 </form>
             </div><!-- /input-group -->
-          </div> <!--/6 column container-->
-    <div class='col-md-3'>
+          </div> <!--/3 column container-->
+    <div class='col-md-6'>
+      <div class='col-md-2'>
+        <h3 id="style_display"></h3>
+      </div>
     </div> <!--end whitespace -->
   </div> <!--end row -->
 </div> <!-- /container -->
