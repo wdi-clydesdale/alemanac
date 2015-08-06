@@ -28,17 +28,22 @@ class HomeController < ApplicationController
     # abv='-lo' (for lo and below)
     # abv='+hi' (for hi and above)
 
-    if params[:min_abv] != nil
+    if params[:min_abv] != ''
       abv_range = params[:min_abv].to_s
-      if params[:max_abv] != nil
+      puts 'AAAA' + abv_range
+      if params[:max_abv] != ''
         abv_range = abv_range + ',' + params[:max_abv].to_s
+        puts 'BBBB' + abv_range
       else
         abv_range = '+' + abv_range
+        puts 'CCCC' + abv_range
       end
     elsif params[:max_abv] != nil
       abv_range = '-' + params[:max_abv].to_s
+      puts 'DDDD' + abv_range
     else
       abv_range = '0,20'
+      puts 'EEEE' + abv_range
     end
 
     #testing output
