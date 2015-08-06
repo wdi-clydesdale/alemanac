@@ -25,28 +25,31 @@
         </th>
   </thead>
   <tbody>
-      <% @coupons.each do |coupon| %>
+      <% @entries.each do |entry| %>
       <tr>
         <td>
-          <%= coupon.id %>
+          <%= entry.beer_name %>
         </td>
         <td>
-          <%= coupon.title %>
+          <%= entry.brewery_name %>
         </td>
         <td>
-          <%= coupon.description%>
+          <%= entry.abv%>
         </td>
         <td>
-          <%= coupon.product %>
+          <%= entry.brew_location %>
         </td>
         <td>
-          <%= coupon.discount %>
+          <%= entry.consume_location %>
         </td>
         <td>
-          <%= coupon.exp_date %>
+          <%= entry.vote %>
         </td>
         <td>
-          <a href='/coupons/edit/<%= coupon.id %>'>Edit</a>
+          <td>
+            <%= entry.notes %>
+          </td>
+          <!-- <a href='/coupons/edit/<%= coupon.id %>'>Edit</a> -->
       </tr>
       <% end %>
   </tbody>

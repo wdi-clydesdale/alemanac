@@ -34,7 +34,7 @@ class EntriesController < ApplicationController
     @beer.beer_name = params[:beer_name]
     @beer.brewery = params[:brewery_name]
     @beer.abv = params[:abv].to_i
-    @beer.brew_location = params[:brewery_location]
+    @beer.brew_location = params[:brew_location]
     @beer.consume_location = params[:consume_location]
     @beer.vote = params[:vote].to_i
     @beer.notes = params[:notes]
@@ -58,9 +58,8 @@ class EntriesController < ApplicationController
   end
 
   get '/my_alemanac' do
-    @entries=EntriesModel.where(entries.user_id = session[:user].id)
-
-  end
+    @user=session[:user]
+    @entries=@user.entries.all
     erb :user_journal
   end
 
