@@ -1,11 +1,4 @@
-<h3>Add a Journal Entry</h3>
 
-<form action="" method="post">
-
-  <input type="text" name="beer_name" value='<%= @beer_name %>'>
-  <input type="text" name="brewery_name" placeholder="name of brewery">
-  <input type="text" name="abv" value="<%= @beer_abv %>">
-  <input type="text" name="brewery_location" placeholder="location of brewery">
   <input type="text" name="consume_location" placeholder="where did you drink it?">
   <input type="text" name="vote" placeholder="from 1-5, 5 being best">
   <!-- <input type=range id=weight min=10 value=10 max=2000 step=100> -->
@@ -14,3 +7,69 @@
   <input type="submit" value="Add to beer journal">
 
 </form>
+
+
+<div class ='containter'>
+<form class="form-horizontal" action="new_api_entry" method="post">
+  <fieldset>
+    <legend><h1>Create a New Alemanac Entry From Search Result</h1></legend>
+    <br>
+      <div class="form-group">
+        <label for="beerName" class="col-md-3 control-label">Name of Beer</label>
+          <div class="col-md-5">
+            <input type="text" class="form-control" id="beerName" name="beer_name"  value='<%= @beer_name %>'>
+          </div>
+        </div>
+        <!-- <div class="form-group">
+          <label for="brewery_name" class="col-md-3 control-label">Brewery Name</label>
+            <div class="col-md-5">
+              <input type="text" class="form-control" id="brewery_name" name="brewery_name"  placeholder="Brewery Name">
+            </div>
+          </div> -->
+        <div class="form-group">
+          <label for="ABV" class="col-md-3 control-label">Alcohol Percentage</label>
+            <div class="col-md-5">
+              <input type="number" class="form-control" id="ABV" name="abv"  "<%= @beer_abv %>">
+            </div>
+          </div>
+        <!-- <div class="form-group">
+          <label for="brewery_location" class="col-md-3 control-label">Brewery Location</label>
+            <div class="col-md-5">
+              <input type="text" class="form-control" id="brewery_location" name="brew_location"  placeholder="Brewery Location">
+            </div>
+          </div> -->
+        <div class="form-group">
+          <label for="consume_location" class="col-md-3 control-label">Where did you drink this beer?</label>
+            <div class="col-md-5">
+              <input type="text" class="form-control" id="consume_location" name="consume_location"  placeholder="Location of consumption">
+            </div>
+          </div>
+          <div class="form-group">
+             <label for="vote" class="col-md-3 control-label">Rating</label>
+             <div class="col-md-5">
+               <select class="form-control" id="vote" name="vote">
+                 <option>1</option>
+                 <option>2</option>
+                 <option>3</option>
+                 <option>4</option>
+                 <option>5</option>
+               </select>
+             </div>
+           </div>
+               <br>
+               <div class="form-group">
+                  <label for="notes" class="col-md-3 control-label">Notes</label>
+                  <div class="col-md-5">
+              <textarea class="form-control" rows="3" id="notes" name='notes'style="margin: 0px -237.84375px 0px 0px; width: 500px; height: 200px;" placeholder="<%= @beer_description %>"></textarea>
+              <span class="help-block">Description included from beer database. Add your own notes too! What did you think about the taste and smell? How was the color and density?</span>
+            </div>
+          </div>
+      <div class="form-group">
+        <div class="col-md-10 col-md-offset-3">
+          <button type="reset" class="btn btn-warning">Cancel</button>
+          <button type="submit" class="btn btn-primary">Add to Alemanac</button>
+        </div>
+    </fieldset>
+</form>
+</div>
+</div>
