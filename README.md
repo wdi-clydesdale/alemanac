@@ -88,4 +88,29 @@ Alemanac's purpose is to explore beer information and save beer information. Exp
 
 3. Alemanac 1.0 only returns the first page of any list of beers. Depending upon the information entered, there may be hundreds of pages available from the API. A version 2.0 would certainly include a way to click to the next page and even enter a page number to browse.
 
-4. With so many results, it's only natural that a user would want to filter in a number of ways. That capability would be much easier if not just plain possible with SQL. That would require loading it into a database. We opted not to pursue a local database for several reasons, including some cited above.  
+4. With so many results, it's only natural that a user would want to filter in a number of ways. That capability would be much easier if not just plain possible with SQL. That would require loading it into a database. We opted not to pursue a local database for several reasons, including some cited above.
+
+# Alemanac Internal Data
+
+The file alemanac_migrations.sql, also in this repository contains the Postgresql commands used to create our databases. The app uses two models (tables): users and EntriesModel
+
+Users
+
+id | first_name | last_name | username | email | password_salt | password_hash
+------------------------------------------------------------------------------
+PK | varchar(25) | varchar(25) | varhar(25) | varchar(50) | varchar(255) | varchar(255)
+
+Entries
+
+id | user_id | users | beer_id | notes | vote | consume_location | consume_date | entry_date | is_custom | beer_name | brewery | brew_location | abv
+_________________________________________________________________________________________________________________________________________________
+PK | FK | integer | text | integer | varchar(100) | varchar(100) | date | boolean | varchar(25) | varchar(25) | varchar(50) | varchar(25) |  real | varchar(255)
+
+## Techonologies Used
+
+-Ruby
+-Sinatra framework
+-JavaScript
+-bootstrap
+-Postgresql
+-ActiveRecord
