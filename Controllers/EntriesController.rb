@@ -3,12 +3,20 @@ class EntriesController < ApplicationController
 # @beer =
 
   get '/new' do
+    if is_not_authenticated? == true
+      return erb :login
+    else
     erb :new_entry
   end
+end
 
   get '/new_api_entry' do
+    if is_not_authenticated? == true
+      return erb :login
+    else
     erb :new_entry_from_api
   end
+end
 
   post'/new_api_entry_add' do
     @beer_name = params['beer_name']
@@ -173,6 +181,4 @@ class EntriesController < ApplicationController
 
      erb :entry_delete_success
     end
-
-
 end
