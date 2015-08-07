@@ -174,3 +174,4 @@ In practice, Pair Programming worked well in the earlier stages, through the use
 6. Ability to switch and choose pages in displayed results
 7. Ability to refine search query
 8. When adding a beer from search results, the description would be filled in.
+9. Install Alemanac on a hosted server so that it is accessible across the internet.
