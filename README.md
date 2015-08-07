@@ -97,13 +97,13 @@ The file alemanac_migrations.sql, also in this repository contains the Postgresq
 Users
 
 id | first_name | last_name | username | email | password_salt | password_hash
-------------------------------------------------------------------------------
+---|------------|-----------|----------|-------|---------------|--------------
 PK | varchar(25) | varchar(25) | varhar(25) | varchar(50) | varchar(255) | varchar(255)
 
 Entries
 
 id | user_id | users | beer_id | notes | vote | consume_location | consume_date | entry_date | is_custom | beer_name | brewery | brew_location | abv
-_________________________________________________________________________________________________________________________________________________
+---|---------|-------|---------|-------|------|------------------|--------------|------------|-----------|-----------|---------|---------------|----
 PK | FK | integer | text | integer | varchar(100) | varchar(100) | date | boolean | varchar(25) | varchar(25) | varchar(50) | varchar(25) |  real | varchar(255)
 
 ## Techonologies Used
@@ -114,3 +114,7 @@ PK | FK | integer | text | integer | varchar(100) | varchar(100) | date | boolea
 -bootstrap
 -Postgresql
 -ActiveRecord
+
+## Running Alemanac
+
+Alemanac requires Ruby files to run on a server. The Postgresql database named alemanac must also be placed on a sserver and can be created with alemanac_migrations.sql
