@@ -4,7 +4,7 @@ class EntriesController < ApplicationController
 
   get '/new' do
     if is_not_authenticated? == true
-      return erb :login
+      redirect '/users/login'
     else
     erb :new_entry
   end
@@ -12,7 +12,7 @@ end
 
   get '/new_api_entry' do
     if is_not_authenticated? == true
-      return erb :login
+        redirect '/users/login'
     else
     erb :new_entry_from_api
   end
@@ -117,7 +117,7 @@ end
     # end
 
     if is_not_authenticated? == true
-      return erb :login
+        redirect '/users/login'
 
     elsif
       @current_user = session[:user]
