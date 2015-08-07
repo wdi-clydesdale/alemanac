@@ -3,16 +3,21 @@ class HomeController < ApplicationController
   enable :sessions
 
   get '/' do
-    # menu_hash = Hash.new { |hash, key| hash[key] =  }
-    # $i = 1
-    # until $i > 170 do
-    #   styles = HTTParty.get('http://api.brewerydb.com/v2/style/' + $i.to_s, {:query => {:key => 'fdf1b28c011f27510720ab3070943f3e'} })
-    #   # puts styles[0]
-    #   puts styles[0]
-    #   $i +=1
+    # The following code, if implemented, will direct the user to
+    # the log-in page instead of search
+    # if is_not_authenticated? == true
+    #     redirect '/users/login'
+    # else
+    #   erb :index
     # end
-    erb :index
-
+    # The following code, if implemented, will pass a parameter to
+    # the index page to indicate whether validation is necessary.
+    if is_not_authenticated? == true
+      @is_not_authenticated = false
+    else
+      @is_not_authenticated = true
+    end
+    erb:index
   end
 
   # It's unwise to use key like this (visible in public repository),
@@ -35,7 +40,7 @@ class HomeController < ApplicationController
       else
         abv_range = '+' + abv_range
       end
-    elsif params[:max_abv] != nil
+    elsif params[:max_abv] != ''
       abv_range = '-' + params[:max_abv].to_s
     else
       abv_range = '0,20'
@@ -66,8 +71,6 @@ class HomeController < ApplicationController
     erb :search_results
   end
 
-#search_param and search_pg must be persistent while session is running
-
   get '/search_results/?:p?' do
     @search_results = EntriesModel.new
     @search_results = HTTParty.get('http://api.brewerydb.com/v2/' + search_param +
@@ -75,4 +78,4 @@ class HomeController < ApplicationController
      {:query => {:key => 'fdf1b28c011f27510720ab3070943f3e'} })
     erb :search_results
   end
-end
+end 
