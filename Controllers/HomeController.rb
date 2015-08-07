@@ -35,7 +35,7 @@ class HomeController < ApplicationController
       else
         abv_range = '+' + abv_range
       end
-    elsif params[:max_abv] != nil
+    elsif params[:max_abv] != ''
       abv_range = '-' + params[:max_abv].to_s
     else
       abv_range = '0,20'
