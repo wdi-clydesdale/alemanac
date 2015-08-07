@@ -37,7 +37,7 @@ end
 
     @beer.beer_name = params[:beer_name]
     # @beer.brewery = params[:brewery_name]
-    @beer.abv = params[:abv].to_i
+    @beer.abv = params[:abv]
     # @beer.brew_location = params[:brew_location]
     @beer.consume_location = params[:consume_location]
     @beer.vote = params[:vote].to_i
@@ -77,7 +77,7 @@ end
 
     @beer.beer_name = params[:beer_name]
     # @beer.brewery = params[:brewery_name]
-    @beer.abv = params[:abv].to_i
+    @beer.abv = params[:abv]
     # @beer.brew_location = params[:brew_location]
     @beer.consume_location = params[:consume_location]
     @beer.vote = params[:vote].to_i
