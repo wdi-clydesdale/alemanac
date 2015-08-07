@@ -1,4 +1,4 @@
-<h1>It's the search results!</h1>
+<h1>Search Results</h1>
 
 <div class="table-responsive">
   <table class="table table-bordered">
@@ -55,11 +55,12 @@
                 <% end %>
             </p>
 
-      <form action="/beers/new_api_entry" method="post">
+      <form action="/beers/new_api_entry_add" method="post">
         <input type="hidden" name="beer_name" value='<%= beer["name"] %>'>
-        <input type="hidden" name="abv" value="<%= beer["abv"] %>">
+        <input type="hidden" name="abv" value='<%= beer["abv"] %>'>
+        <input type="hidden" name="notes" value='<%= beer["description"] %>'>
         <!-- <input type="hidden" name="beer_name" value="<%= beer["name"] %>"> add brewery!-->
-        <button type="submit" class="btn btn-primary" value="Add to Journal">Add to Journal</button>
+        <button type="submit" class="btn btn-primary" value="Add to Journal">Add to my Alemanac</button>
       </form>
 
     </td>

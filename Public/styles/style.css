@@ -5,10 +5,10 @@
   display: none;
 }
 
-.well {
+/*.well {
   background-image: url('/images/cropped-stock-photo-beer-tasting-189516968.jpg');
   /*background-image: url('/images/cropped-stock-photo-beer-bubbles-in-the-high-magnification-and-close-up-124784641.jpg');*/
-}
+/*}*/
 
 #beer-facts {
   width: 30%;
@@ -25,4 +25,55 @@
 }
 #abv {
   margin-top: 5px;
+}
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+#navclink{
+  height:40px;
+  width: 40px;
+  margin-top: -10px;
+}
+#well {
+  width: 100%;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  margin-bottom: 2%;
+
+}
+
+#header1{
+  display: inline;
+  position: relative;
+  float:left;
+}
+#clink {
+  height: 200px;
+  width: 200px;
+  display: inline;
+  padding: 20px;
+
+}
+#welcome {
+  display: inline;
+  position: relative;
+  float: left;
+  padding-top: 3%;
+  padding-left: 2%;
+
+}
+
+#feet {
+  background-color: #dd4814
+  
 }

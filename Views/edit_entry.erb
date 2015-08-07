@@ -1,13 +1,13 @@
-
 <div class ='containter'>
-<form class="form-horizontal" action="new_api_entry" method="post">
+<form class="form-horizontal" action="/beers/edit" method="post">
   <fieldset>
-    <legend><h1>Create a New Alemanac Entry From Search Result</h1></legend>
+    <legend><h1>Edit Alemanac Entry</h1></legend>
     <br>
       <div class="form-group">
         <label for="beerName" class="col-md-3 control-label">Name of Beer</label>
           <div class="col-md-5">
-            <input type="text" class="form-control" id="beerName" name="beer_name"  value='<%= @beer_name %>'>
+            <input type="hidden" name="id" value="<%= @entry.id %>">
+            <input type="text" class="form-control" id="beerName" name="beer_name" value='<%= @entry.beer_name %>'>
           </div>
         </div>
         <!-- <div class="form-group">
@@ -19,7 +19,7 @@
         <div class="form-group">
           <label for="ABV" class="col-md-3 control-label">Alcohol Percentage</label>
             <div class="col-md-5">
-              <input type="number" class="form-control" id="ABV" name="abv"  "<%= @beer_abv %>">
+              <input type="number" class="form-control" id="ABV" name="abv"  value='<%= @entry.abv %>'>
             </div>
           </div>
         <!-- <div class="form-group">
@@ -31,7 +31,7 @@
         <div class="form-group">
           <label for="consume_location" class="col-md-3 control-label">Where did you drink this beer?</label>
             <div class="col-md-5">
-              <input type="text" class="form-control" id="consume_location" name="consume_location"  placeholder="Location of consumption">
+              <input type="text" class="form-control" id="consume_location" name="consume_location"  value='<%= @entry.consume_location %>'>
             </div>
           </div>
           <div class="form-group">
@@ -50,8 +50,8 @@
                <div class="form-group">
                   <label for="notes" class="col-md-3 control-label">Notes</label>
                   <div class="col-md-5">
-              <textarea class="form-control" rows="3" id="notes" name='notes'style="margin: 0px -237.84375px 0px 0px; width: 500px; height: 200px;" placeholder="<%= @beer_description %>"></textarea>
-              <span class="help-block">Description included from beer database. Add your own notes too! What did you think about the taste and smell? How was the color and density?</span>
+              <textarea class="form-control" rows="3" id="notes" name='notes'style="margin: 0px -237.84375px 0px 0px; width: 663px; height: 200px;" value='<%= @entry.notes %>'></textarea>
+              <span class="help-block">What did you think about the taste and smell? How was the color and density?</span>
             </div>
           </div>
       <div class="form-group">
@@ -59,6 +59,7 @@
           <button type="reset" class="btn btn-warning">Cancel</button>
           <button type="submit" class="btn btn-primary">Add to Alemanac</button>
         </div>
+      </div>
     </fieldset>
 </form>
 </div>

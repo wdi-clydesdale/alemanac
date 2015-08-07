@@ -92,13 +92,6 @@ class UsersController < ApplicationController
     redirect '/'
   end
 
-  get '/new_results' do
-    if is_not_authenticated? == false
-      return erb :search_results
-    else
-      @message = "Sorry, but you must have an Alemanac account to save new beer journal entries. Please register. "
-      return erb :login_notice
-    end
-  end
+
 
 end
