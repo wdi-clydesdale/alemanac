@@ -14,6 +14,15 @@
   width: 30%;
 }
 
-#beerstyles {
-  display: inline-grid;
+#beerStyles {
+  display: block;
+  margin-top: 10px;
+}
+
+#search_box {
+  margin-top:10px;
+
+}
+#abv {
+  margin-top: 5px;
 }
