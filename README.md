@@ -126,7 +126,7 @@ Alemanac requires Ruby files to run on a server. The Postgresql database named a
 
 One of the objectives of this General Assembly Web Development Immersive project was use Pair Programming, a method of programming where one terminal is used, one developer types in code and the other partner watches and advises, roles usually referred to as driver and navigator. The advantages of this process are educational, collaborational and efficiency. The driver can concentrate on syntax, command entry, and speed. THe navigator can think about the larger picture and do quick research when necessary to make progress past hurdles.
 
-In practice, Pair Programming worked well in the earlier stages, through the user stories and model design, file structure and boilerplate set-up. As the complex nature of the chose API was gradually discovered and coding interests became known, it was clear that a parallel approach was the more natural way to go and in the interest of meeting the project requirements within the limited timeframe (5 days).
+In practice, Pair Programming worked well in the earlier stages, through the user stories and model design, file structure and boilerplate set-up. As the complex nature of the chose API was gradually discovered and coding interests became known, it was clear that a parallel approach was the more natural way to go and in the interest of meeting the project requirements within the limited timeframe (5 days). As a result Kate did most of the front-end work and David did most of the back-end work.
 
 
 ## Version 2.0 Wishlist
