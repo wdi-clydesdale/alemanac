@@ -12,3 +12,4 @@ $('#beerSearch input').on('change', function() {
 });
 
 }); //document ready function!!!!
+
