@@ -11,7 +11,7 @@ Completed: August 6, 2015
 
 Alemanac allows a user to search for beer information by style, keyword, or alcohol content (%ABV range). Users may create an account and journal (save) data about a beer, such as where they drank it and what characteristics they noted. Beer information can be entered from the search results page or entered manually.
 
-![Search Page]('https://github.com/wdi-clydesdale/alemanac/blob/master/Public/images/screen-search.png')
+![Search Page]('https://github.com/wdi-clydesdale/alemanac/blob/master/Public/images/screen-search.png?raw=true')
 
 ## Beer Data
 
