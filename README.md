@@ -93,6 +93,30 @@ Alemanac's purpose is to explore beer information and save beer information. Exp
 
 4. With so many results, it's only natural that a user would want to filter in a number of ways. That capability would be much easier if not just plain possible with SQL. That would require loading it into a database. We opted not to pursue a local database for several reasons, including some cited above.
 
+# Project Propoal (originally posted [here](https://github.com/wdi-clydesdale/alemanac/blob/master/BeerProjectScope.md)
+
+Summary: Tentatively named 'Point of Brew', this app will have both beer search functionality and CRUD functionality within a 'beer journal'.
+
+User Flow: Users are first prompted to login, once they've logged in they are taken to a page where than can either choose to search, choose to go to their journal page, or choose to edit/view a beer that they've previously logged. The search functionality will be provided by the Brewery DB API and users will be able to search by a pre-defined set of parameters. The journal functionality will be created using SQL/ActiveRecord and users will be able to save beers that they've tried with notes and ratings.
+
+Technologies:
+-Ruby
+-SQL
+-ActiveRecord
+-Bootstrap
+
+
+Views:
+
+Age Confirmation
+login
+search/Search Results
+myBeers
+
+# Wireframe
+
+![Wireframe of Alemanac](https://raw.githubusercontent.com/wdi-clydesdale/alemanac/master/Draft1AlemanacWireframes.png)
+
 # Alemanac Internal Data
 
 The file alemanac_migrations.sql, also in this repository contains the Postgresql commands used to create our databases. The app uses two models (tables): users and EntriesModel
@@ -114,13 +138,24 @@ PK | FK | integer | text | integer | varchar(100) | varchar(100) | date | boolea
 *Ruby
 *Sinatra framework
 *JavaScript
+*jQuery
 *Bootstrap framework styling HTML
 *Postgresql database
 *ActiveRecord Object-Relational Mapping facility
+*Microsoft Excel
+*Microsoft VBA
 
 ## Running Alemanac
 
-Alemanac requires Ruby files to run on a server. The Postgresql database named alemanac must also be placed on a sserver and can be created with alemanac_migrations.sql
+Alemanac requires Ruby files to run on a server. The Postgresql database named alemanac must also be placed on a sserver and can be created with alemanac_migrations.sql.
+
+### To run Alemanac:
+
+1.  Fork this repository.
+2.  Create a Postgresql database and copy the alemanac_migrations.sql commands to the postgresql command line.
+3.  Run 'bundle' from a terminal command line to install required gems.
+4.  From the terminal command line, run 'bundle exec rackup' to start the server.
+5.  Open an internet browser and navigate to 'localhost:9292'.
 
 ## Pair Programming
 
@@ -139,3 +174,4 @@ In practice, Pair Programming worked well in the earlier stages, through the use
 6. Ability to switch and choose pages in displayed results
 7. Ability to refine search query
 8. When adding a beer from search results, the description would be filled in.
+9. Install Alemanac on a hosted server so that it is accessible across the internet.
