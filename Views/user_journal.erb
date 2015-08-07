@@ -3,7 +3,7 @@
 <div class = 'container'>
 <% if @entries != nil %>
 <div class="table-responsive">
-  <table class="table table-bordered">
+  <table class="table">
     <thead>
           <th>
             Beer
@@ -62,7 +62,7 @@
             <form action="/beers/delete" method="post">
               <%= entry.id %>
                 <input type="hidden" name="beer_id" value="<%= entry.id %>">
-                <input type="submit" value='Delete Entry'>
+                  <button type="submit" class="btn btn-primary" value="Delete Entry">Delete</button>
               </form>
               </td>
 

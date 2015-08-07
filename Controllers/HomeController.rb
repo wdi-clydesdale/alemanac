@@ -69,10 +69,11 @@ class HomeController < ApplicationController
 #search_param and search_pg must be persistent while session is running
 
   get '/search_results/?:p?' do
+    else
     @search_results = EntriesModel.new
     @search_results = HTTParty.get('http://api.brewerydb.com/v2/' + search_param +
      '$p=' + search_pg.to_s +
      {:query => {:key => 'fdf1b28c011f27510720ab3070943f3e'} })
     erb :search_results
-  end
+  end 
 end
