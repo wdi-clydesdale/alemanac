@@ -11,6 +11,9 @@ Completed: August 6, 2015
 
 Alemanac allows a user to search for beer information by style, keyword, or alcohol content (%ABV range). Users may create an account and journal (save) data about a beer, such as where they drank it and what characteristics they noted. Beer information can be entered from the search results page or entered manually.
 
+![Search Page](https://raw.githubusercontent.com/wdi-clydesdale/alemanac/master/Public/images/screen-search.png)
+![Journal Page](https://raw.githubusercontent.com/wdi-clydesdale/alemanac/master/Public/images/screen-journal.png)
+
 ## Beer Data
 
 Alemanac uses an RESTful web API provided by BreweryDB.com which contains over 46,700 beer entries, as well as data on breweries and events.  Alemanac uses the following data fields from the API: name, styleId, glass, label url, ABV. Other fields, such as ingredients, and serving temperature were available, but not implemented in Alemanac. Not every field is populated for every record. As the API is crowdsourced, the data is subject not only to missing information, but bias and error. The data is provided as a hash with subhashes. For example, the 'style' subhash for every beer includes it's id, Category id, name, and create Date, i.e., information best referenced in a separate table.
@@ -123,6 +126,8 @@ Alemanac requires Ruby files to run on a server. The Postgresql database named a
 
 One of the objectives of this General Assembly Web Development Immersive project was use Pair Programming, a method of programming where one terminal is used, one developer types in code and the other partner watches and advises, roles usually referred to as driver and navigator. The advantages of this process are educational, collaborational and efficiency. The driver can concentrate on syntax, command entry, and speed. THe navigator can think about the larger picture and do quick research when necessary to make progress past hurdles.
 
+In practice, Pair Programming worked well in the earlier stages, through the user stories and model design, file structure and boilerplate set-up. As the complex nature of the chose API was gradually discovered and coding interests became known, it was clear that a parallel approach was the more natural way to go and in the interest of meeting the project requirements within the limited timeframe (5 days).
+
 
 ## Version 2.0 Wishlist
 
@@ -133,3 +138,4 @@ One of the objectives of this General Assembly Web Development Immersive project
 5. Investigate other data sources for completeness, capabilities and ease of implementation.
 6. Ability to switch and choose pages in displayed results
 7. Ability to refine search query
+8. When adding a beer from search results, the description would be filled in.
