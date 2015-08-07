@@ -87,7 +87,7 @@ class UsersController < ApplicationController
   end
 
 
-  get 'users/logout' do
+  get '/logout' do
     session[:user] = nil
     redirect '/'
   end

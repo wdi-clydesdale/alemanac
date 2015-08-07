@@ -37,6 +37,7 @@
                         <li><a href="/beers/my_alemanac">My Alemanac</a></li>
                         <li><a href="/beers/new">Add New Beer</a></li>
                           <li><a href="/users/new_user">Create Account</a></li>
+                          <li id='logout'><a href="/users/logout">Logout</a></li>
                       </ul>
                     </div>
                   </nav>
@@ -46,17 +47,7 @@
 
 
 <!--Page Headline ADD TO INDEX WHEN DAVID IS DONE WITH INDEX!!!!!!! -->
-  <div class = 'container'>
-        <div class = 'clearfix' id='well'>
-          <!-- <div class='page-header'> -->
-            <div id='header1'>
-            <img src="/images/clinkbeers.png" class="img-responsive" alt="Responsive image" id='clink'>
-          </div>
-          <div id="welcome">
-            <h1 >Welcome to Alemanac<br><small>Search and save your favorite brews</small></h1>
-          </div>
-        </div>
-      </div>
+
 
       <div class='container'>
     <%= yield %>
@@ -66,7 +57,7 @@
 
     <footer class='footer footer-fixed-bottom' id='feet'>
       <div class='container'>
-          <h4>&copy;David Hayes and Kate Shirley
+          <h5 id="copyright">Website &copy; David Hayes and Kate Shirley   <small>|||||</small>   Beer Data &copy; BreweryDB</h5>
         </div>
     </footer>
   </div>

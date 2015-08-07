@@ -75,5 +75,17 @@
 
 #feet {
   background-color: #dd4814
-  
+
+}
+
+#journaltable {
+  padding-top: 4%;
+  font-size: 2rem;
+}
+#copyright {
+  color: white; 
+}
+
+#logout {
+
 }

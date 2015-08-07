@@ -1,6 +1,6 @@
 <h1> My Alemanac </h1>
 
-<div class = 'container'>
+<div class = 'container' id='journaltable'>
 <% if @entries != nil %>
 <div class="table-responsive">
   <table class="table">
@@ -27,17 +27,16 @@
             Notes
           </th>
           <th>
-            Edit?
+            Edit
           </th>
           <th>
-            Delete?
+            Delete
           </th>
     </thead>
     <tbody>
          <% @entries.map do |entry| %>
          <tr>
           <td>
-            <%= entry.id %> --
             <%= entry.beer_name %>
           </td>
           <td>
@@ -56,11 +55,10 @@
               <%= entry.notes %>
             </td>
             <td>
-              <a href='/beers/edit_entry/<%= entry.id %>'>Edit</a>
+              <a href='/beers/edit_entry/<%= entry.id %>'><button class="btn btn-warning">Edit</button></a>
             </td>
             <td>
             <form action="/beers/delete" method="post">
-              <%= entry.id %>
                 <input type="hidden" name="beer_id" value="<%= entry.id %>">
                   <button type="submit" class="btn btn-primary" value="Delete Entry">Delete</button>
               </form>
