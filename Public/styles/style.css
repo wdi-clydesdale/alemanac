@@ -18,6 +18,7 @@
 #beerStyles {
   display: block;
   margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 #search_box {
@@ -92,6 +93,12 @@
 }
 #copyright {
   color: white;
+}
+#beerbutton{
+  display: block;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding:12px; 
 }
 
 #logout {

@@ -41,25 +41,30 @@
 
     <div class="row">
 
-      <div class="col-md-6">
-        <div class="input-group">
+      <div class="col-md-4">
+
 
         <!-- <button class="btn btn-default" type="button">Go!</button> -->
 
-
+        <h3>Search for a beer term: </h3>
+      </div>
+        <div class="col-md-8">
+        <div class="input-group">
           <input type="text" name="search_string" class="form-control" placeholder="Search for beer term...">
 
         </div>
       </div>
-      <div class="col-md-6"></div>
+    </div>
 
-    </div><!-- row -->
+    <!-- row -->
+
+    <!-- <div class="col-md-6"></div> -->
 
     <div class="row" id="abv">  <!-- row with Choose by Style and ABV -->
 
       <div class="col-md-4">
 
-        <h3>or Choose an ABV range</h3>
+        <h3>or Choose an ABV range:</h3>
       </div>
       <div class="col-md-8">
         <h3>
@@ -71,11 +76,11 @@
     </div>
 
     <div class="row">
-      <div class="col-md-3">
+      <div class="col-md-4">
         <h3>AND a style...</h3>
       </div>
       <div class="col-md-8">
-        <button type="submit" class="btn btn-primary" name="name" value="Search">Get that beer!</button>
+        <button type="submit" class="btn btn-primary" name="name" value="Search" id="beerbutton">Get that beer!</button>
       </div>
       <div class="col-md-1">
           <input type="text" id="styleId" name="styleId" placeholder="23">
