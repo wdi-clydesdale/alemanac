@@ -138,6 +138,7 @@ PK | FK | integer | text | integer | varchar(100) | varchar(100) | date | boolea
 *Ruby
 *Sinatra framework
 *JavaScript
+*jQuery
 *Bootstrap framework styling HTML
 *Postgresql database
 *ActiveRecord Object-Relational Mapping facility
@@ -146,7 +147,15 @@ PK | FK | integer | text | integer | varchar(100) | varchar(100) | date | boolea
 
 ## Running Alemanac
 
-Alemanac requires Ruby files to run on a server. The Postgresql database named alemanac must also be placed on a sserver and can be created with alemanac_migrations.sql
+Alemanac requires Ruby files to run on a server. The Postgresql database named alemanac must also be placed on a sserver and can be created with alemanac_migrations.sql.
+
+### To run Alemanac:
+
+1.  Fork this repository.
+2.  Create a Postgresql database and copy the alemanac_migrations.sql commands to the postgresql command line.
+3.  Run 'bundle' from a terminal command line to install required gems.
+4.  From the terminal command line, run 'bundle exec rackup' to start the server.
+5.  Open an internet browser and navigate to 'localhost:9292'.
 
 ## Pair Programming
 
