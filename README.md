@@ -93,6 +93,14 @@ Alemanac's purpose is to explore beer information and save beer information. Exp
 
 4. With so many results, it's only natural that a user would want to filter in a number of ways. That capability would be much easier if not just plain possible with SQL. That would require loading it into a database. We opted not to pursue a local database for several reasons, including some cited above.
 
+# Project Propoal
+
+[User stories are documented](https://github.com/wdi-clydesdale/alemanac/blob/master/BeerProjectScope.md)
+
+# Wireframe
+
+![Wireframe of Alemanac](https://raw.githubusercontent.com/wdi-clydesdale/alemanac/master/Draft1AlemanacWireframes.png)
+
 # Alemanac Internal Data
 
 The file alemanac_migrations.sql, also in this repository contains the Postgresql commands used to create our databases. The app uses two models (tables): users and EntriesModel
@@ -117,6 +125,8 @@ PK | FK | integer | text | integer | varchar(100) | varchar(100) | date | boolea
 *Bootstrap framework styling HTML
 *Postgresql database
 *ActiveRecord Object-Relational Mapping facility
+*Microsoft Excel
+*Microsoft VBA
 
 ## Running Alemanac
 
