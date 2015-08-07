@@ -24,6 +24,8 @@ The BreweryDB API search function searches for terms through the data object. Th
 
 ## Implementation Challenges
 
+###BreweryDB
+
 Alemanac connects to the BreweryDB API using the Ruby gem HTTParty. The parameters passed by Alemanac may include a search term, an ABV minimum value, an ABV maximum value, and a style ID.
 
 ```ruby
@@ -93,6 +95,76 @@ Alemanac's purpose is to explore beer information and save beer information. Exp
 
 4. With so many results, it's only natural that a user would want to filter in a number of ways. That capability would be much easier if not just plain possible with SQL. That would require loading it into a database. We opted not to pursue a local database for several reasons, including some cited above.
 
+### CRUD functionality through SQL, ActiveRecord, and Ruby
+
+Besides beer search functionality the other main purpose of this app is to allow users to save, update, and delete entries to a 'beer journal' so the user can track what they've tried and liked. The current user is established through Ruby sessions. When items are added to the EntriesModel the user's foreign key is passed through so that the user can only edit and view their own entries. A potential bug that was discovered with ActiveRecord for Sinatra was we could not effectively display just the current user's entries on the journal page, perhaps because ActiveRecord was not recognizing the reference key for the user's foriegn key within the EntriesModel. This was solved by calling for EntriesModel.all on the journal page, and then running an if/then statement ont he results. Code included below:
+
+```ruby
+get '/my_alemanac' do
+
+  if is_not_authenticated? == true
+      redirect '/users/login'
+
+  elsif
+    @current_user = session[:user]
+  end
+  @all_entries = EntriesModel.all
+  @entries = Array.new
+  @all_entries.each do |entry|
+
+    if entry.user_id == @current_user.id
+      @entries.push(entry)
+    end
+
+  end
+  puts @current_user.id
+  erb :user_journal
+end
+```
+
+Editing journal entries is possible by passing hidden input fields on the "Edit" button on the journal page, so that the beer_id is identified and all information about the beer is pre-filled into the editing form. Delete functionality works in nearly the same way, by passing the beer_id through a hidden input field on the button.
+Code below:
+
+```ruby
+get '/edit_entry/:id' do
+  @id = params[:id]
+  @entry = EntriesModel.find(@id)
+
+  erb :edit_entry
+end
+
+post '/edit' do
+
+  @entry = EntriesModel.find(params[:id])
+  @entry.beer_name = params[:beer_name]
+  @entry.abv = params[:abv]
+  @entry.consume_location = params[:consume_location]
+  @entry.vote = params[:vote]
+  @entry.notes = params[:notes]
+  @entry.save
+
+  erb :entry_edit_success
+end
+
+##delete
+
+post '/delete' do
+   @id = params[:beer_id]
+   @entry = EntriesModel.find(@id)
+
+   puts '---'
+   puts params
+   puts @entry.beer_name
+   puts '---'
+
+   @entry.destroy
+
+   erb :entry_delete_success
+  end
+end
+
+```
+
 # Project Propoal (originally posted [here](https://github.com/wdi-clydesdale/alemanac/blob/master/BeerProjectScope.md)
 
 Summary: Tentatively named 'Point of Brew', this app will have both beer search functionality and CRUD functionality within a 'beer journal'.
@@ -147,7 +219,7 @@ PK | FK | integer | text | integer | varchar(100) | varchar(100) | date | boolea
 
 ## Running Alemanac
 
-Alemanac requires Ruby files to run on a server. The Postgresql database named alemanac must also be placed on a sserver and can be created with alemanac_migrations.sql.
+Alemanac requires Ruby files to run on a server. The Postgresql database named alemanac must also be placed on a server and can be created with alemanac_migrations.sql.
 
 ### To run Alemanac:
 
@@ -159,7 +231,7 @@ Alemanac requires Ruby files to run on a server. The Postgresql database named a
 
 ## Pair Programming
 
-One of the objectives of this General Assembly Web Development Immersive project was use Pair Programming, a method of programming where one terminal is used, one developer types in code and the other partner watches and advises, roles usually referred to as driver and navigator. The advantages of this process are educational, collaborational and efficiency. The driver can concentrate on syntax, command entry, and speed. THe navigator can think about the larger picture and do quick research when necessary to make progress past hurdles.
+One of the objectives of this General Assembly Web Development Immersive project was use Pair Programming, a method of programming where one terminal is used, one developer types in code and the other partner watches and advises, roles usually referred to as driver and navigator. The advantages of this process are educational, collaborational and efficiency. The driver can concentrate on syntax, command entry, and speed. The navigator can think about the larger picture and do quick research when necessary to make progress past hurdles.
 
 In practice, Pair Programming worked well in the earlier stages, through the user stories and model design, file structure and boilerplate set-up. As the complex nature of the chose API was gradually discovered and coding interests became known, it was clear that a parallel approach was the more natural way to go and in the interest of meeting the project requirements within the limited timeframe (5 days). As a result Kate did most of the front-end work and David did most of the back-end work.
 
@@ -175,3 +247,4 @@ In practice, Pair Programming worked well in the earlier stages, through the use
 7. Ability to refine search query
 8. When adding a beer from search results, the description would be filled in.
 9. Install Alemanac on a hosted server so that it is accessible across the internet.
+10. Ability for users to sort through their journals!
