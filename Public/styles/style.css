@@ -10,6 +10,10 @@
   /*background-image: url('/images/cropped-stock-photo-beer-bubbles-in-the-high-magnification-and-close-up-124784641.jpg');*/
 /*}*/
 
+#authentication {
+  display: none;
+}
+
 #beer-facts {
   width: 30%;
 }
@@ -75,5 +79,5 @@
 
 #feet {
   background-color: #dd4814
-  
+
 }

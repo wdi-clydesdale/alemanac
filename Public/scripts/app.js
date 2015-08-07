@@ -11,5 +11,6 @@ $('#beerSearch input').on('change', function() {
   $("#styleId").val(idval);
 });
 
-}); //document ready function!!!!
+if ($('#authentication').text() == 'is_not_authenticated') $('#myModal').modal('show')
 
+}); //document ready function!!!!

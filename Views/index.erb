@@ -1,3 +1,26 @@
+<!-- Age Verification -->
+<div class='hidden'>
+  <%= @is_not_authenticated %>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Age Verification</h4>
+      </div>
+      <div class="modal-body">
+        <h3>This website contains information about alocholic beverages.</h3>
+        <h3>Please verify your age. Are you at least 21 years old?</h3>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Yes</button>
+        <button type="button" class="btn btn-primary">No</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <form id="beerSearch" action="/" method="post">
   <div class="container"> <!-- all of form -->
 

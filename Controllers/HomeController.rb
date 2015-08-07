@@ -3,16 +3,19 @@ class HomeController < ApplicationController
   enable :sessions
 
   get '/' do
-    # menu_hash = Hash.new { |hash, key| hash[key] =  }
-    # $i = 1
-    # until $i > 170 do
-    #   styles = HTTParty.get('http://api.brewerydb.com/v2/style/' + $i.to_s, {:query => {:key => 'fdf1b28c011f27510720ab3070943f3e'} })
-    #   # puts styles[0]
-    #   puts styles[0]
-    #   $i +=1
+    # The following code, if implemented, will direct the user to
+    # the log-in page instead of search
+    if is_not_authenticated? == true
+        redirect '/users/login'
+    else
+      erb :index
+    end
+    # The following code, if implemented, will pass a parameter to
+    # the index page to indicate whether validation is necessary.
+    # if is_not_authenticated? == true
+    #   @is_not_authenticated = false
     # end
-    erb :index
-
+    # erb:index
   end
 
   # It's unwise to use key like this (visible in public repository),
