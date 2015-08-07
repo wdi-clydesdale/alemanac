@@ -223,7 +223,9 @@ Alemanac requires Ruby files to run on a server. The Postgresql database named a
 
 ### To run Alemanac:
 
-1.  Fork this repository.
+1.  Clone this repository.
+2.  Navigate to the directory it is store in.
+3.  Obtain a BreweryDB.com API key and swap it for the existing one in Controllers\HomeController.rb
 2.  Create a Postgresql database and copy the alemanac_migrations.sql commands to the postgresql command line.
 3.  Run 'bundle' from a terminal command line to install required gems.
 4.  From the terminal command line, run 'bundle exec rackup' to start the server.
@@ -248,3 +250,4 @@ In practice, Pair Programming worked well in the earlier stages, through the use
 8. When adding a beer from search results, the description would be filled in.
 9. Install Alemanac on a hosted server so that it is accessible across the internet.
 10. Ability for users to sort through their journals!
+11. Hide the API key, which is visible herein, but meant to be kept private.
