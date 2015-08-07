@@ -10,16 +10,16 @@ $('#beerSearch input').on('change', function() {
   idval= $('input[name=styles]:checked').val();
   $("#styleId").val(idval);
 });
-console.log($('#authentication').html());
+if ( $('#authentication').length ) {
+
+  var s = $('#authentication').html();
+  console.log(s);
+  if (s.indexOf('false') > -1) {
+
+   $('#myModal').modal('show')
+      
+   }
+
+}
 
 }); //document ready function!!!!
-// It seems like the authentication function happens too early, so...
-$(document).ready(function() {
-
-if ($('#authentication').html()) {
-
- $('#myModal').modal('show')
-
- }
-
- });
