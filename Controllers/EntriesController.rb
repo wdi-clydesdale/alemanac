@@ -93,9 +93,31 @@ class EntriesController < ApplicationController
     erb :new_entry_success
   end
 
+
+  # if is_not_authenticated? == false
+  #   return erb :search_results
+  # else
+  #   @message = "Sorry, but you must have an Alemanac account to save new beer journal entries. Please register. "
+  #   return erb :login_notice
+  # end
+
   get '/my_alemanac' do
     # @user=session[:user]
-    @current_user = session[:user]
+    # if is_not_authenticated? == true
+    #   @message = 'Sorry, but you must be logged in to view your entries.'
+    #   erb :login_notice
+    # end
+
+    if is_not_authenticated? == true
+      return erb :login
+
+    elsif
+      @current_user = session[:user]
+    end
+
+    # if :user.id != @current_user.id
+    #   erb :login_notice
+    # end
     # @user_id=@user.user_id
     # @entries=Entries.where(user_id: session[:current_user].id)
     @all_entries = EntriesModel.all
