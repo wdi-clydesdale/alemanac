@@ -108,12 +108,12 @@ PK | FK | integer | text | integer | varchar(100) | varchar(100) | date | boolea
 
 ## Techonologies Used
 
--Ruby
--Sinatra framework
--JavaScript
--bootstrap
--Postgresql
--ActiveRecord
+*Ruby
+*Sinatra framework
+*JavaScript
+*Bootstrap framework styling HTML
+*Postgresql database
+*ActiveRecord Object-Relational Mapping facility
 
 ## Running Alemanac
 
