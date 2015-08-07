@@ -118,3 +118,18 @@ PK | FK | integer | text | integer | varchar(100) | varchar(100) | date | boolea
 ## Running Alemanac
 
 Alemanac requires Ruby files to run on a server. The Postgresql database named alemanac must also be placed on a sserver and can be created with alemanac_migrations.sql
+
+## Pair Programming
+
+One of the objectives of this General Assembly Web Development Immersive project was use Pair Programming, a method of programming where one terminal is used, one developer types in code and the other partner watches and advises, roles usually referred to as driver and navigator. The advantages of this process are educational, collaborational and efficiency. The driver can concentrate on syntax, command entry, and speed. THe navigator can think about the larger picture and do quick research when necessary to make progress past hurdles.
+
+
+## Version 2.0 Wishlist
+
+1. Ability for Users to view other user's journal entries and comment. More generhally, social interaction and sharing.
+2. Add label photos from search results to user journal entries (when saved from search results).
+3. Allow users to upload label images for their custom entries
+4. Add brewery information from API (as available)
+5. Investigate other data sources for completeness, capabilities and ease of implementation.
+6. Ability to switch and choose pages in displayed results
+7. Ability to refine search query
