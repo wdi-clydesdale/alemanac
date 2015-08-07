@@ -93,9 +93,25 @@ Alemanac's purpose is to explore beer information and save beer information. Exp
 
 4. With so many results, it's only natural that a user would want to filter in a number of ways. That capability would be much easier if not just plain possible with SQL. That would require loading it into a database. We opted not to pursue a local database for several reasons, including some cited above.
 
-# Project Propoal
+# Project Propoal (originally posted [here](https://github.com/wdi-clydesdale/alemanac/blob/master/BeerProjectScope.md)
 
-[User stories are documented](https://github.com/wdi-clydesdale/alemanac/blob/master/BeerProjectScope.md)
+Summary: Tentatively named 'Point of Brew', this app will have both beer search functionality and CRUD functionality within a 'beer journal'.
+
+User Flow: Users are first prompted to login, once they've logged in they are taken to a page where than can either choose to search, choose to go to their journal page, or choose to edit/view a beer that they've previously logged. The search functionality will be provided by the Brewery DB API and users will be able to search by a pre-defined set of parameters. The journal functionality will be created using SQL/ActiveRecord and users will be able to save beers that they've tried with notes and ratings.
+
+Technologies:
+-Ruby
+-SQL
+-ActiveRecord
+-Bootstrap
+
+
+Views:
+
+Age Confirmation
+login
+search/Search Results
+myBeers
 
 # Wireframe
 
