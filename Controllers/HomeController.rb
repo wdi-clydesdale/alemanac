@@ -28,7 +28,6 @@ class HomeController < ApplicationController
     # api string segment is abv='lo,hi' ,
     # abv='-lo' (for lo and below)
     # abv='+hi' (for hi and above)
-
     if params[:min_abv] != ''
       abv_range = params[:min_abv].to_s
       if params[:max_abv] != ''
