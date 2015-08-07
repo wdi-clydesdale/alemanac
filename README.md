@@ -135,3 +135,4 @@ In practice, Pair Programming worked well in the earlier stages, through the use
 5. Investigate other data sources for completeness, capabilities and ease of implementation.
 6. Ability to switch and choose pages in displayed results
 7. Ability to refine search query
+8. When adding a beer from search results, the description would be filled in.
