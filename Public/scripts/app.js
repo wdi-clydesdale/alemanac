@@ -10,7 +10,16 @@ $('#beerSearch input').on('change', function() {
   idval= $('input[name=styles]:checked').val();
   $("#styleId").val(idval);
 });
-
-if ($('#authentication').text() == 'is_not_authenticated') $('#myModal').modal('show')
+console.log($('#authentication').html());
 
 }); //document ready function!!!!
+// It seems like the authentication function happens too early, so...
+$(document).ready(function() {
+
+if ($('#authentication').html()) {
+
+ $('#myModal').modal('show')
+
+ }
+
+ });

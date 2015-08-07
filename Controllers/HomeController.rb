@@ -5,17 +5,19 @@ class HomeController < ApplicationController
   get '/' do
     # The following code, if implemented, will direct the user to
     # the log-in page instead of search
-    if is_not_authenticated? == true
-        redirect '/users/login'
-    else
-      erb :index
-    end
+    # if is_not_authenticated? == true
+    #     redirect '/users/login'
+    # else
+    #   erb :index
+    # end
     # The following code, if implemented, will pass a parameter to
     # the index page to indicate whether validation is necessary.
-    # if is_not_authenticated? == true
-    #   @is_not_authenticated = false
-    # end
-    # erb:index
+    if is_not_authenticated? == true
+      @is_not_authenticated = false
+    else
+      @is_not_authenticated = true
+    end
+    erb:index
   end
 
   # It's unwise to use key like this (visible in public repository),
