@@ -1,0 +1,37 @@
+<li data-styleId="137"><a href='#'>Aged Beer (Ale or Lager)</a></li>
+<li data-styleId="109"><a href='#'>American-Style Cream Ale or Lager</a></li>
+<li data-styleId="167"><a href='#'>Belgian-style Fruit Beer</a></li>
+<li data-styleId="39"><a href='#'>Brett Beer</a></li>
+<li data-styleId="110"><a href='#'>California Common Beer</a></li>
+<li data-styleId="168"><a href='#'>Chili Pepper Beer</a></li>
+<li data-styleId="122"><a href='#'>Chocolate / Cocoa-Flavored Beer</a></li>
+<li data-styleId="123"><a href='#'>Coffee-Flavored Beer</a></li>
+<li data-styleId="115"><a href='#'>Dark American Wheat Ale or Lager with Yeast</a></li>
+<li data-styleId="116"><a href='#'>Dark American Wheat Ale or Lager without Yeast</a></li>
+<li data-styleId="130"><a href='#'>Experimental Beer (Lager or Ale)</a></li>
+<li data-styleId="120"><a href='#'>Field Beer</a></li>
+<li data-styleId="119"><a href='#'>Fruit Beer</a></li>
+<li data-styleId="114"><a href='#'>Fruit Wheat Ale or Lager with or without Yeast</a></li>
+<li data-styleId="118"><a href='#'>German-Style Rye Ale (Roggenbier) with or without Yeast</a></li>
+<li data-styleId="111"><a href='#'>Ginjo Beer or Sake-Yeast Beer</a></li>
+<li data-styleId="127"><a href='#'>Gluten-Free Beer</a></li>
+<li data-styleId="124"><a href='#'>Herb and Spice Beer</a></li>
+<li data-styleId="131"><a href='#'>Historical Beer</a></li>
+<li data-styleId="128"><a href='#'>Indigenous Beer (Lager or Ale)</a></li>
+<li data-styleId="112"><a href='#'>Light American Wheat Ale or Lager with Yeast</a></li>
+<li data-styleId="113"><a href='#'>Light American Wheat Ale or Lager without Yeast</a></li>
+<li data-styleId="169"><a href='#'>Mixed Culture Brett Beer</a></li>
+<li data-styleId="139"><a href='#'>Non-Alcoholic (Beer) Malt Beverages</a></li>
+<li data-styleId="138"><a href='#'>Other Strong Ale or Lager</a></li>
+<li data-styleId="121"><a href='#'>Pumpkin Beer</a></li>
+<li data-styleId="117"><a href='#'>Rye Ale or Lager with or without Yeast</a></li>
+<li data-styleId="108"><a href='#'>Session Beer</a></li>
+<li data-styleId="129"><a href='#'>Smoke Beer (Lager or Ale)</a></li>
+<li data-styleId="125"><a href='#'>Specialty Beer</a></li>
+<li data-styleId="126"><a href='#'>Specialty Honey Lager or Ale</a></li>
+<li data-styleId="170"><a href='#'>Wild Beer</a></li>
+<li data-styleId="132"><a href='#'>Wood-and Barrel-Aged Beer</a></li>
+<li data-styleId="134"><a href='#'>Wood-and Barrel-Aged Dark Beer</a></li>
+<li data-styleId="133"><a href='#'>Wood-and Barrel-Aged Pale to Amber Beer</a></li>
+<li data-styleId="136"><a href='#'>Wood-and Barrel-Aged Sour Beer</a></li>
+<li data-styleId="135"><a href='#'>Wood-and Barrel-Aged Strong Beer</a></li>

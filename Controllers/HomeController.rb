@@ -23,11 +23,16 @@ class HomeController < ApplicationController
   # It's unwise to use key like this (visible in public repository),
   # but we don't yet know how to hide it
 
+  # @search_string is a word to search the api data for
+  # @search_param is the string to send to the api which may include
+  # a search string, a style id, an acohol by volume range, or a page number
+
   post '/' do
-    @search_string = EntriesModel.new
 
     #search API for beers with the chosen styleId. We require a style because we
     #don't want to return all 46,000+ beers in the API database.
+
+    @pg_num = params[:pg_num].to_i || 1
 
     # Alcohol By Volume search
     # api string segment is abv='lo,hi' ,
@@ -46,23 +51,40 @@ class HomeController < ApplicationController
       abv_range = '0,20'
     end
 
+    #page
+    if @pg_num > 0
+      page ='&p=' + @pg_num.to_s
+    else
+      page = ''
+    end
+
     #testing output
     puts params[:min_abv]
     puts params[:max_abv]
     puts abv_range
 
-    if params[:search_string] == '' || nil
-      if params[:styleId] == '' || nil
-        search_param = 'beers?abv=' + abv_range
-      end if
-      search_param = 'beers?styleId=' + params[:styleId].to_s + '?abv=' +  abv_range
-    else #release the constraints of style and abv if search box is used
-      # note: API search ORs multiple words. For sake of rapid deployment, our search will
-      # only consider the first word
-      search_param = 'search?q=' + params[:search_string].partition(" ").first + '?abv=' +  abv_range
+    if params[:search_param] == "" || nil  #not using existing api parameter text
+      if params[:search_string] == '' || nil  #not looking for a term in the api data
+        if params[:styleId] == '' || nil  #not using a beer style filter in the api parameter text
+          @search_param = 'beers?abv=' + abv_range
+        elsif #we ARE using a beer style filter (additionally filtered by some abv range)
+          @search_param = 'beers?styleId=' + params[:styleId].to_s + '?abv=' +  abv_range
+        end
+      else #release the constraints of style and abv if search box is used
+        # note: API search ORs multiple words. For sake of rapid deployment, our search will
+        # only consider the first word
+        @search_param = 'search?q=' + params[:search_string].partition(" ").first + '?abv=' +  abv_range
+      end
+    elsif  #we're just changing pages for the existing search parameter text
+      @search_param = params[:search_param]
     end
-    puts search_param
-    @search_results = HTTParty.get('http://api.brewerydb.com/v2/' + search_param + "&key=fdf1b28c011f27510720ab3070943f3e")
+    puts @search_param
+    puts @pg_num
+    puts page
+    out1 = 'http://api.brewerydb.com/v2/' + @search_param + page + "&key=fdf1b28c011f27510720ab3070943f3e"
+    puts out1
+
+    @search_results = HTTParty.get('http://api.brewerydb.com/v2/' + @search_param + page + "&key=fdf1b28c011f27510720ab3070943f3e")
 
     #testing output
     # puts @search_results # the data key contains all beer info and is an array
@@ -71,11 +93,18 @@ class HomeController < ApplicationController
     erb :search_results
   end
 
-  get '/search_results/?:p?' do
-    @search_results = EntriesModel.new
-    @search_results = HTTParty.get('http://api.brewerydb.com/v2/' + search_param +
-     '$p=' + search_pg.to_s +
+  post '/search_results' do
+    @search_param = params[:search_param]
+    @pg_num = params[:pg_num] || 1
+    #page
+    if @pg_num > 0
+      page ='&pg=' + @pg_num.to_s
+    else
+      page = ''
+    end
+    @search_results = HTTParty.get('http://api.brewerydb.com/v2/' + params[:search_param] +
+     '$p=' + params[:pg_num] +
      {:query => {:key => 'fdf1b28c011f27510720ab3070943f3e'} })
     erb :search_results
   end
-end 
+end

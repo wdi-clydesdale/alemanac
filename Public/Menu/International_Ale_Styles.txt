@@ -1,0 +1,2 @@
+<li data-styleId="74"><a href='#'>Australian-Style Pale Ale</a></li>
+<li data-styleId="73"><a href='#'>International-Style Pale Ale</a></li>

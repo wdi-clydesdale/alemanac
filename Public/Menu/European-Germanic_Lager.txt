@@ -1,0 +1,18 @@
+<li data-styleId="87"><a href='#'>Bamberg-Style Bock Rauchbier</a></li>
+<li data-styleId="86"><a href='#'>Bamberg-Style Helles Rauchbier</a></li>
+<li data-styleId="85"><a href='#'>Bamberg-Style Marzen Rauchbier</a></li>
+<li data-styleId="76"><a href='#'>Bohemian-Style Pilsener</a></li>
+<li data-styleId="79"><a href='#'>Dortmunder / European-Style Export</a></li>
+<li data-styleId="83"><a href='#'>European-Style Dark / MŸnchener Dunkel</a></li>
+<li data-styleId="90"><a href='#'>German-Style Doppelbock</a></li>
+<li data-styleId="91"><a href='#'>German-Style Eisbock</a></li>
+<li data-styleId="89"><a href='#'>German-Style Heller Bock/Maibock</a></li>
+<li data-styleId="77"><a href='#'>German-Style Leichtbier</a></li>
+<li data-styleId="81"><a href='#'>German-Style MÌ_rzen</a></li>
+<li data-styleId="82"><a href='#'>German-Style Oktoberfest / Wiesen (Meadow)</a></li>
+<li data-styleId="75"><a href='#'>German-Style Pilsener</a></li>
+<li data-styleId="84"><a href='#'>German-Style Schwarzbier</a></li>
+<li data-styleId="92"><a href='#'>Kellerbier (Cellar beer) or Zwickelbier - Lager</a></li>
+<li data-styleId="78"><a href='#'>MŸnchener (Munich)-Style Helles</a></li>
+<li data-styleId="88"><a href='#'>Traditional German-Style Bock</a></li>
+<li data-styleId="80"><a href='#'>Vienna-Style Lager</a></li>

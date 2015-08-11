@@ -1,0 +1,16 @@
+<li data-styleId="61"><a href='#'>Belgian-Style Blonde Ale</a></li>
+<li data-styleId="64"><a href='#'>Belgian-Style Dark Strong Ale</a></li>
+<li data-styleId="58"><a href='#'>Belgian-Style Dubbel</a></li>
+<li data-styleId="57"><a href='#'>Belgian-Style Flanders Oud Bruin or Oud Red Ales</a></li>
+<li data-styleId="68"><a href='#'>Belgian-Style Fruit Lambic</a></li>
+<li data-styleId="67"><a href='#'>Belgian-Style Gueuze Lambic</a></li>
+<li data-styleId="66"><a href='#'>Belgian-Style Lambic</a></li>
+<li data-styleId="62"><a href='#'>Belgian-Style Pale Ale</a></li>
+<li data-styleId="63"><a href='#'>Belgian-Style Pale Strong Ale</a></li>
+<li data-styleId="60"><a href='#'>Belgian-Style Quadrupel</a></li>
+<li data-styleId="69"><a href='#'>Belgian-Style Table Beer</a></li>
+<li data-styleId="59"><a href='#'>Belgian-Style Tripel</a></li>
+<li data-styleId="65"><a href='#'>Belgian-Style White (or Wit) / Belgian-Style Wheat</a></li>
+<li data-styleId="72"><a href='#'>French & Belgian-Style Saison</a></li>
+<li data-styleId="71"><a href='#'>French-Style Biere de Garde</a></li>
+<li data-styleId="70"><a href='#'>Other Belgian-Style Ales</a></li>

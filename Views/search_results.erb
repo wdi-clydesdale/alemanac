@@ -1,5 +1,6 @@
 <h1>Search Results</h1>
 
+
 <div class="table-responsive">
   <table class="table table-bordered">
 
@@ -73,4 +74,41 @@
     </tr>
   <% end %>
   </table>
+  <!-- New Attempt at a nav bar -->
+
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Page <%= @search_results["currentPage"] %> of <%= @search_results["numberOfPages"] %> pages</a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+        <ul class="nav navbar-nav">
+          <li id="prev"><a href="#bs-example-navbar-collapse-2">-</a></li>
+          <li id="next"><a href="#bs-example-navbar-collapse-2">+</a></li>
+        </ul>
+        <form class="navbar-form navbar-left" id="pageControl" name="pageControl" action="/" method="post" role="page">
+          <div class="form-group">
+            <input type="text" id="pg_num" name="pg_num" class="form-control" placeholder="Go to page"  value='<%= @search_results["currentPage"] %>'>
+          </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+          <input type="text" id="numberOfPages" name="numberOfPages" class="hidden" value="<%= @search_results["numberOfPages"] %>">
+          <input type="text" name="abv_min" class="hidden" value="0">
+          <input type="text" name="abv_max" class="hidden" value="20">
+          <input type="text" name="search_string" class="hidden" value="">
+          <input type="text" class="hidden" id="search_param" name="search_param" value="<%= @search_param %>">
+        </form>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/">New Search</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
 </div> <!-- end table-resposive div -->

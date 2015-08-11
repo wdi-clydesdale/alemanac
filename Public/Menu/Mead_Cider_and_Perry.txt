@@ -1,0 +1,18 @@
+<li data-styleId="156"><a href='#'>Apple Wine</a></li>
+<li data-styleId="147"><a href='#'>Braggot</a></li>
+<li data-styleId="149"><a href='#'>Common Cider</a></li>
+<li data-styleId="152"><a href='#'>Common Perry</a></li>
+<li data-styleId="143"><a href='#'>Cyser (Apple Melomel)</a></li>
+<li data-styleId="140"><a href='#'>Dry Mead</a></li>
+<li data-styleId="150"><a href='#'>English Cider</a></li>
+<li data-styleId="151"><a href='#'>French Cider</a></li>
+<li data-styleId="155"><a href='#'>Fruit Cider</a></li>
+<li data-styleId="146"><a href='#'>Metheglin</a></li>
+<li data-styleId="154"><a href='#'>New England Cider</a></li>
+<li data-styleId="148"><a href='#'>Open Category Mead</a></li>
+<li data-styleId="145"><a href='#'>Other Fruit Melomel</a></li>
+<li data-styleId="157"><a href='#'>Other Specialty Cider or Perry</a></li>
+<li data-styleId="144"><a href='#'>Pyment (Grape Melomel)</a></li>
+<li data-styleId="141"><a href='#'>Semi-Sweet Mead</a></li>
+<li data-styleId="142"><a href='#'>Sweet Mead</a></li>
+<li data-styleId="153"><a href='#'>Traditional Perry</a></li>

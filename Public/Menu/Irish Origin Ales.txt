@@ -1,3 +1,0 @@
-<option>Irish Red</option>
-<option>Dry Irish Stout</option>
-<option>Export Stout</option>

@@ -1,0 +1,23 @@
+<li data-styleId="17"><a href='#'>British-Style Barley Wine Ale</a></li>
+<li data-styleId="16"><a href='#'>British-Style Imperial Stout</a></li>
+<li data-styleId="18"><a href='#'>Brown Porter</a></li>
+<li data-styleId="1"><a href='#'>Classic English-Style Pale Ale</a></li>
+<li data-styleId="165"><a href='#'>Contemporary Gose</a></li>
+<li data-styleId="163"><a href='#'>Double Red Ale</a></li>
+<li data-styleId="12"><a href='#'>English-Style Brown Ale</a></li>
+<li data-styleId="11"><a href='#'>English-Style Dark Mild Ale</a></li>
+<li data-styleId="2"><a href='#'>English-Style India Pale Ale</a></li>
+<li data-styleId="10"><a href='#'>English-Style Pale Mild Ale</a></li>
+<li data-styleId="6"><a href='#'>English-Style Summer Ale</a></li>
+<li data-styleId="5"><a href='#'>Extra Special Bitter</a></li>
+<li data-styleId="21"><a href='#'>Oatmeal Stout</a></li>
+<li data-styleId="13"><a href='#'>Old Ale</a></li>
+<li data-styleId="3"><a href='#'>Ordinary Bitter</a></li>
+<li data-styleId="19"><a href='#'>Robust Porter</a></li>
+<li data-styleId="15"><a href='#'>Scotch Ale</a></li>
+<li data-styleId="9"><a href='#'>Scottish-Style Export Ale</a></li>
+<li data-styleId="8"><a href='#'>Scottish-Style Heavy Ale</a></li>
+<li data-styleId="7"><a href='#'>Scottish-Style Light Ale</a></li>
+<li data-styleId="4"><a href='#'>Special Bitter or Best Bitter</a></li>
+<li data-styleId="14"><a href='#'>Strong Ale</a></li>
+<li data-styleId="20"><a href='#'>Sweet or Cream Stout</a></li>

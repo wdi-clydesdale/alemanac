@@ -1,0 +1,2 @@
+<li data-styleId="107"><a href='#'>Dry Lager</a></li>
+<li data-styleId="106"><a href='#'>International-Style Pilsener</a></li>

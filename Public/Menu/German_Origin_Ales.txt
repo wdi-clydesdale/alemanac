@@ -1,0 +1,13 @@
+<li data-styleId="159"><a href='#'>Adambier</a></li>
+<li data-styleId="54"><a href='#'>Bamberg-Style Weiss (Smoke) Rauchbier (Dunkel or Helles)</a></li>
+<li data-styleId="46"><a href='#'>Berliner-Style Weisse (Wheat)</a></li>
+<li data-styleId="55"><a href='#'>German-Style Altbier</a></li>
+<li data-styleId="45"><a href='#'>German-Style Kaslsch / Kalln-Style Kalsch</a></li>
+<li data-styleId="50"><a href='#'>German-Style Leichtes Weizen / Weissbier</a></li>
+<li data-styleId="56"><a href='#'>Kellerbier (Cellar beer) or Zwickelbier - Ale</a></li>
+<li data-styleId="47"><a href='#'>Leipzig-Style Gose</a></li>
+<li data-styleId="51"><a href='#'>South German-Style Bernsteinfarbenes Weizen / Weissbier</a></li>
+<li data-styleId="52"><a href='#'>South German-Style Dunkel Weizen / Dunkel Weissbier</a></li>
+<li data-styleId="48"><a href='#'>South German-Style Hefeweizen / Hefeweissbier</a></li>
+<li data-styleId="49"><a href='#'>South German-Style Kristall Weizen / Kristall Weissbier</a></li>
+<li data-styleId="53"><a href='#'>South German-Style Weizenbock / Weissbock</a></li>

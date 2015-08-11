@@ -1,2 +1,0 @@
-<option>Baltic Porter</option>
-<option>Tropical Light Lager</option>

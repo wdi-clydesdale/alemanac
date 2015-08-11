@@ -1,0 +1,11 @@
+<li data-styleId="96"><a href='#'>American-Style Amber (Low Calorie) Lager</a></li>
+<li data-styleId="101"><a href='#'>American-Style Amber Lager</a></li>
+<li data-styleId="103"><a href='#'>American-Style Dark Lager</a></li>
+<li data-styleId="99"><a href='#'>American-Style Ice Lager</a></li>
+<li data-styleId="93"><a href='#'>American-Style Lager</a></li>
+<li data-styleId="94"><a href='#'>American-Style Light (Low Calorie) Lager</a></li>
+<li data-styleId="95"><a href='#'>American-Style Low-Carbohydrate Light Lager</a></li>
+<li data-styleId="102"><a href='#'>American-Style MÌ_rzen / Oktoberfest</a></li>
+<li data-styleId="100"><a href='#'>American-Style Malt Liquor</a></li>
+<li data-styleId="98"><a href='#'>American-Style Pilsener</a></li>
+<li data-styleId="97"><a href='#'>American-Style Premium Lager</a></li>

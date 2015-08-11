@@ -1,0 +1,3 @@
+<li data-styleId="23"><a href='#'>Classic Irish-Style Dry Stout</a></li>
+<li data-styleId="24"><a href='#'>Foreign (Export)-Style Stout</a></li>
+<li data-styleId="22"><a href='#'>Irish-Style Red Ale</a></li>

@@ -1,0 +1,21 @@
+<li data-styleId="32"><a href='#'>American-Style Amber/Red Ale</a></li>
+<li data-styleId="34"><a href='#'>American-Style Barley Wine Ale</a></li>
+<li data-styleId="41"><a href='#'>American-Style Black Ale</a></li>
+<li data-styleId="37"><a href='#'>American-Style Brown Ale</a></li>
+<li data-styleId="158"><a href='#'>American-Style Imperial Porter</a></li>
+<li data-styleId="43"><a href='#'>American-Style Imperial Stout</a></li>
+<li data-styleId="30"><a href='#'>American-Style India Pale Ale</a></li>
+<li data-styleId="25"><a href='#'>American-Style Pale Ale</a></li>
+<li data-styleId="40"><a href='#'>American-Style Sour Ale</a></li>
+<li data-styleId="42"><a href='#'>American-Style Stout</a></li>
+<li data-styleId="29"><a href='#'>American-Style Strong Pale Ale</a></li>
+<li data-styleId="35"><a href='#'>American-Style Wheat Wine Ale</a></li>
+<li data-styleId="28"><a href='#'>Dark American-Belgo-Style Ale</a></li>
+<li data-styleId="26"><a href='#'>Fresh "Wet" Hop Ale</a></li>
+<li data-styleId="36"><a href='#'>Golden or Blonde Ale</a></li>
+<li data-styleId="31"><a href='#'>Imperial or Double India Pale Ale</a></li>
+<li data-styleId="33"><a href='#'>Imperial Red Ale</a></li>
+<li data-styleId="27"><a href='#'>Pale American-Belgo-Style Ale</a></li>
+<li data-styleId="164"><a href='#'>Session India Pale Ale</a></li>
+<li data-styleId="38"><a href='#'>Smoke Porter</a></li>
+<li data-styleId="44"><a href='#'>Specialty Stouts</a></li>

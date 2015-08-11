@@ -16,6 +16,7 @@
 <div id='authentication' class='hidden' >
   <%= @is_not_authenticated %>
 </div>
+
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -39,10 +40,11 @@
 <form id="beerSearch" action="/" method="post">
   <div class="container"> <!-- all of form -->
 
+
+
     <div class="row">
 
       <div class="col-md-4">
-
 
         <!-- <button class="btn btn-default" type="button">Go!</button> -->
 
@@ -75,666 +77,62 @@
       </div>
     </div>
 
-    <div class="row">
-      <div class="col-md-4">
+    <div class="row"> <!-- dropdown row -->
+      <div class="col-md-3">
         <h3>AND a style...</h3>
       </div>
-      <div class="col-md-8">
+      <div class="col-md-3"> <!-- dropdown column 1 -->
+        <div class="dropdown">
+          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Select a Category
+              <span class="caret"></span>
+            </button>
+          <ul id="first-choice" class="dropdown-menu" aria-labelledby="dropdownMenu1">
+             <li><a href="#">Select a Style Category</a></li>
+             <li><a href="#">Belgian And French Origin Ales</a></li>
+             <li><a href="#">British Origin Ales</a></li>
+             <li><a href="#">European-germanic Lager</a></li>
+             <li><a href="#">German Origin Ales</a></li>
+             <li><a href="#">Hybrid-Mixed Beer</a></li>
+             <li><a href="#">International Ale Styles</a></li>
+             <li><a href="#">International Styles</a></li>
+             <li><a href="#">Irish Origin Ales</a></li>
+             <li><a href="#">Malternative Beverages</a></li>
+             <li><a href="#">Mead Cider and Perry</a></li>
+             <li><a href="#">North American Lager</a></li>
+             <li><a href="#">North American Origin Ales</a></li>
+             <li><a href="#">Other Lager</a></li>
+             <li><a href="#">Other Origin</a></li>
+          </ul>
+        </div>
+      </div> <!-- dropdown col 1 -->
+
+      <div class="col-md-3"> <!-- dropdown column 1 -->
+        <div class="dropdown">
+          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Select a Style
+            <span class="caret"></span>
+          </button>
+          <ul id="second-choice" class="dropdown-menu" aria-labelledby="dropdownMenu2">
+          </ul>
+        </div>
+      </div> <!-- second dropdown column/empty form fields -->
+      <div class="col-md-3">
+        <input type="text" name="search_param" class="hidden" value="">
+        <input type="number" name="pg_num" class="hidden" value="">
+      </div>
+
+    </div> <!-- dropdown row -->
+
+    <div class="row">
+
+      <div class="col-md-10">
         <button type="submit" class="btn btn-primary" name="name" value="Search" id="beerbutton">Get that beer!</button>
       </div>
-      <div class="col-md-1">
+      <div class="col-md-2 hidden">
           <input type="text" id="styleId" name="styleId" placeholder="23">
       </div>
-    </div>
-
-
-    <div class='container' id="beerStyles"> <!--slide down panel -->
-
-      <div class="row">
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="1"> English Pale
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="2"> English IPA
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="3"> Bitter
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="4"> Special Bitter
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="5"> ESB
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="6"> English Summer Ale
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="7"> Scottish Light
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="8"> Scottish Heavy
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="9"> Scottish Export
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="10"> English Pale Mild
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="11"> English Dark Mild
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="12"> English Brown
-        </div>
-      </div>
-
-
-      <div class="row">
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="13"> Old Ale
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="14"> Strong Ale
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="15"> Scotch Ale
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="16"> British Imperial Stout
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="17"> British Barleywine
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="18"> Brown Porter
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="19"> Robust Porter
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="20"> Sweet Stout
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="21"> Oatmeal Stout
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="163"> Double Red
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="165"> Contemporary Gose
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="22"> Irish Red
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="23"> Dry Irish Stout
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="24"> Export Stout
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="25"> American Pale
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="26"> Wet Hop Ale
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="27"> American/Belgian Pale
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="28"> American/Belgian Dark
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="29"> American Strong Pale
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="30"> American IPA
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="31"> Imperial IPA
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="32"> Amber
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="33"> Imperial Red
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="34"> American Barleywine
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="35"> Wheatwine
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="36"> Blonde
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="37"> American Brown
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="38"> Smoke Porter
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="40"> Sour
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="41"> Black Ale
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="42"> American Stout
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="43"> American Imperial Stout
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="44"> Stout
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="158"> American Imperial Porter
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="164"> Session IPA
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="45"> Kolsch
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="46"> Berlinerweisse
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="47"> Leipzig Gose
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="48"> Hefeweizen
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="49"> Kristallweizen
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="50"> Leichtesweizen
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="51"> Bernsteinfarbenesweizen
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="52"> Dunkelweizen
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="53"> Weizenbock
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="54"> Rauchbier
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="55"> Altbier
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="56"> Kellerbier
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="159"> Adambier
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="58"> Belgian Dubbel
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="59"> Belgian Tripel
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="60"> Belgian Quad
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="61"> Belgian Blonde
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="62"> Belgian Pale
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="63"> Belgian Pale Strong
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="64"> Belgian Dark Strong
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="65"> Witbier
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="66"> Lambic
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="67"> Gueuze
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="68"> Fruit Lambic
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="69"> Belgian Table Beer
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="70"> Belgian Ale
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="71"> Biere de Garde
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="72"> Saison
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="73"> International Pale
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="74"> Austrailian Pale
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="75"> German Pilsener
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="76"> Bohemian Pilsener
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="77"> Leichtbier
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="78"> Helles
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="79"> Dortmunder
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="80"> Vienna Lager
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="81"> Marzen
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="82"> Oktoberfest
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="83"> Euro Dark
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="84"> Schwarzbier
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="85"> Marzen Rauchbier
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="86"> Helles Rauchbier
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="87"> Bock Rauchbier
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="88"> Bock
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="89"> Maibock
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="90"> Doppelbock
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="91"> Eisbock
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="92"> Kellerbier
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="93"> American Lager
-        </div>
-       </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="94"> American Light Lager
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="95"> American Low-Carb Lager
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="96"> American Amber Lager
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="97"> American Premium Lager
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="98"> American Pilsener
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="99"> American Ice Lager
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="100"> Malt Liquor
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="101"> American Amber Lager
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="102"> American Oktoberfest
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="103"> American Dark Lager
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="104"> Baltic Porter
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="105"> Tropical Light Lager
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="106"> International Pilsener
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="107"> Dry Lager
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="39"> Brett
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="108"> Session
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="109"> Cream Ale
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="110"> California Common
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="111"> Gingo/Sake
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="112"> Wheat Ale
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="113"> Wheat Ale
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="114"> Fruit Wheat Ale
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="115"> Dark Wheat Ale
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="116"> Dark Wheat Ale
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="117"> Rye Ale
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="118"> German Rye
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="119"> Fruit Beer
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="120"> Field Beer
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="121"> Pumpkin Beer
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="122"> Chocolate Beer
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="123"> Coffee Beer
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="124"> Spice Beer
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="125"> Specialty
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="126"> Honey Beer
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="127"> Gluten-Free Beer
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="128"> Indigenous Beer
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="129"> Smoke Beer
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="130"> Experimental Beer
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="131"> Traditional
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="132"> BBL Aged
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="133"> BBL Aged Pale
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="134"> BBL Aged Dark
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="135"> BBL Aged Strong
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="136"> BBL Aged Sour
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="137"> Aged Beer
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="138"> Strong Ale
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="139"> Non-Alcoholic
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="167"> Belgian Fruit
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="168"> Chili Beer
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="169"> Mixed Brett
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="170"> Wild Beer
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="140"> Dry Mead
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="141"> Semi-Sweet Mead
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="142"> Sweet Mead
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="143"> Cyser
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="144"> Pyment
-        </div>
-       </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="145"> Fruit Melomel
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="146"> Metheglin
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="147"> Braggot
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="148"> Mead
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="149"> Common Cider
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="150"> English Cider
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="151"> French Cider
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="152"> Common Perry
-        </div>
-      </div>
-
-
-      <div class="row">
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="153"> Traditional Perry
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="154"> New England Cider
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="155"> Fruit Cider
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="156"> Apple Wine
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="157"> Specialty Cider
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="160"> Grodziskie
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="166"> Dutch Kuit
-        </div>
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="161"> Flavored Malt Beverage
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3">
-          <input type="radio" name="styles" value="162"> Energy Malt Beverage
-        </div>
-         <div class="col-lg-3">
-          <input type="radio" name="styles" value="57"> Flanders Red
-        </div>
-        <div class="col-lg-6">
-        </div>
-      </div>
-
-    </div> <!-- sliding panel with beer styles -->
-
+    </div><!-- end row -->
 
 
 
