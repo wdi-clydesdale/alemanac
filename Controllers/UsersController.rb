@@ -28,7 +28,7 @@ class UsersController < ApplicationController
 
 
       if does_user_exist?(params[:username]) == TRUE
-        @message = 'This username already exists'
+        @message = 'This username already exists. Try again.'
         return erb :login_notice
       end
 
@@ -74,13 +74,13 @@ class UsersController < ApplicationController
     # does the password match?
     pwd = params[:password]
     if @user.password_hash == BCrypt::Engine.hash_secret(pwd, @user.password_salt)
-      @message = 'You have been logged in successfully'
+      @message = 'You have been logged in successfully!'
       session[:user] = @user
       # puts @user.id
       # puts session[:user].id
       return erb :login_notice
     else
-      @message = 'Sorry but your password does not match'
+      @message = 'Sorry but your password does not match our records. Please try again. '
       return erb :login_notice
     end
 
