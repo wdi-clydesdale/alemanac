@@ -31,6 +31,10 @@ $('#next').click(function() {
   $('#pg_num').val(new_page);
 });
 
+$('#pg_num').change(function() {
+  alert('fred');
+});
+
 $("#first-choice").on('click', 'li a', function() {
   var str =   $(this).html();
   $("#dropdownMenu1").html(str);

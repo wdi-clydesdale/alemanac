@@ -65,11 +65,11 @@
 
     </td>
 
-    <td>
-      <p>
-        <%= beer["description"] %>
-      </p>
-    </td>
+      <td>
+        <p>
+          <%= beer["description"] %>
+        </p>
+      </td>
 
     </tr>
   <% end %>
@@ -89,20 +89,22 @@
       </div>
 
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
-        <ul class="nav navbar-nav">
+        <!-- <ul class="nav navbar-nav">
           <li id="prev"><a href="#bs-example-navbar-collapse-2">-</a></li>
           <li id="next"><a href="#bs-example-navbar-collapse-2">+</a></li>
-        </ul>
+        </ul> -->
         <form class="navbar-form navbar-left" id="pageControl" name="pageControl" action="/" method="post" role="page">
+          <button type="button" name="prev" id="prev" class="btn btn-default">Prev</button>
+          <button type="button" name="next" id="next" class="btn btn-default">Next</button>
           <div class="form-group">
             <input type="text" id="pg_num" name="pg_num" class="form-control" placeholder="Go to page"  value='<%= @search_results["currentPage"] %>'>
           </div>
-          <button type="submit" class="btn btn-default">Submit</button>
+          <button type="submit" class="btn btn-default">Go to page</button>
           <input type="text" id="numberOfPages" name="numberOfPages" class="hidden" value="<%= @search_results["numberOfPages"] %>">
-          <input type="text" name="abv_min" class="hidden" value="0">
-          <input type="text" name="abv_max" class="hidden" value="20">
-          <input type="text" name="search_string" class="hidden" value="">
-          <input type="text" class="hidden" id="search_param" name="search_param" value="<%= @search_param %>">
+          <input name="abv_min" class="hidden" value="0">
+          <input name="abv_max" class="hidden" value="20">
+          <input name="search_string" class="hidden" value="">
+          <input class="hidden" id="search_param" name="search_param" value="<%= @search_param %>">
         </form>
         <ul class="nav navbar-nav navbar-right">
           <li><a href="/">New Search</a></li>
