@@ -1,15 +1,11 @@
 require 'sinatra/base'
 
-Dir.glob('./{controllers,models}/*.rb').each {
-  |file| require file
-}
-
-require('./Controllers/ApplicationController')
-require('./Controllers/EntriesController')
-require('./Controllers/HomeController')
-require('./Controllers/UsersController')
-require('./Models/EntriesModel')
-require('./Models/UsersModel')
+require('./controllers/ApplicationController')
+require('./controllers/EntriesController')
+require('./controllers/HomeController')
+require('./controllers/UsersController')
+require('./models/EntriesModel')
+require('./models/UsersModel')
 
 # map controllers
 
