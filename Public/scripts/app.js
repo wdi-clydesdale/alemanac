@@ -23,13 +23,20 @@ if ( $('#authentication').length ) {
 $('#prev').click(function() {
   var new_page = Math.max(parseInt($('#pg_num').val())-1,1);
   $('#pg_num').val(new_page);
+ $(this).parents("#pageControl").submit();  
 });
 
 $('#next').click(function() {
   var top = $('#numberOfPages').val();
   var new_page = Math.min(parseInt($('#pg_num').val())+1,top);
   $('#pg_num').val(new_page);
+ $(this).parents("#pageControl").submit();
 });
+
+ $("#pg_num").change(function() {
+   alert('hi');
+  //  $(this).parents("#pageControl").submit();
+ });
 
 
 $("#first-choice").on('click', 'li a', function() {
