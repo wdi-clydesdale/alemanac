@@ -8,6 +8,7 @@ require('./models/EntriesModel')
 require('./models/UsersModel')
 
 # map controllers
+
 map('/') {run HomeController}
 map('/users') {run UsersController}
 map('/beers') {run EntriesController}
